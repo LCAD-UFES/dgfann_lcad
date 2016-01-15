@@ -29,7 +29,7 @@ open( logFile , "w").close()
 
 # Instância do Algoritmo Genético:
 AG = AlgGenetico(tipoGenes, populacaoInicial, avaliacaoRNA, criterioSatisfacao,
-                 considMaiorAvaliacao=False, maxGeracoes=maximoGeracoes, verboso=True, distribuido=True)
+                 considMaiorAvaliacao=False, maxGeracoes=maximoGeracoes, verboso=True, distribuido=False)
 
 # Obtendo os resultados:
 resultado = AG.evoluir()
