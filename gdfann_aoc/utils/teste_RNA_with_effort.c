@@ -40,7 +40,7 @@ main(int argc, char **argv)
 		printf("Original: %f " , data->output[i][0]);
 		printf("Erro: %f "    , (float) fann_abs(calc_out[0] - data->output[i][0]));
         //printf("T: %f B: %f CV: %f\n", data->input[i][360-3]*100.0, data->input[i][360-2]*100.0, data->input[i][360-1]*5.0);
-        printf("T: %f B: %f CV: %f\n", data->input[i][360-3]*10, data->input[i][360-2], data->input[i][360-1]);
+        printf("S: %f CC: %f\n", data->input[i][80-2]/2.0, data->input[i][80-1]);
         error += (float) powf(fann_abs(calc_out[0] - data->output[i][0]),2);
 	}
 
