@@ -53,3 +53,12 @@ To start the process, you have to:
         ./utils/02-gen_plots.sh
 
         They will be placed in 'results_plots' folder
+
+
+IMPORTANT:
+
+      You have to install FANN library to run the code.
+         - In Debian based system (like Ubuntu): apt-get install libfann-dev
+         
+      You have to install jsonrpclib python package to run distributed mode.
+         - In Debian based system (like Ubuntu): apt-get install python-jsonrpclib
