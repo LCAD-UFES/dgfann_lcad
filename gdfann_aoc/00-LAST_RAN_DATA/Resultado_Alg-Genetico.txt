@@ -1,0 +1,9 @@
+Cromossomo: 1 5 0 50 0 0.5 0.5 0.7 200  - Validacao: 4.1e-05
+Cromossomo: 1 5 15 18 0 0.7 0.6 0.4 100  - Validacao: 5.1e-05
+Cromossomo: 1 6 8 40 0 0.8 0.5 0.8 300  - Validacao: 5.8e-05
+Cromossomo: 2 5 0 15 0 0.5 0.5 0.3 300  - Validacao: 6.6e-05
+Cromossomo: 2 4 0 15 0 0.4 0.6 0.7 200  - Validacao: 6.9e-05
+Cromossomo: 1 5 14 50 0 0.6 0.1 0.3 100  - Validacao: 7.2e-05
+Cromossomo: 1 6 0 40 0 0.1 0.1 0.4 100  - Validacao: 7.8e-05
+Cromossomo: 1 12 5 300 0 0.4 0.4 0.7 100  - Validacao: 7.9e-05
+Cromossomo: 2 5 13 18 0 0.5 0.1 0.6 300  - Validacao: 8.3e-05
