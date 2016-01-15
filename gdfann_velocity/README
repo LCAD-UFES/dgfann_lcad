@@ -4,7 +4,7 @@ To start the process, you have to:
 
         make
 
-    2. After, you have to configure.
+    2. After, you have to configure it.
 
     2.1. If you will use more than one machine to run the GA:
 
@@ -20,7 +20,7 @@ To start the process, you have to:
 
     2.2. If you will use only this machine to run GA:
 
-        2.2.1. Inside RNAGenetico.py, change: 'distribuido=True' to 'distribuido=False'
+        2.2.1. Inside RNAGenetico.py, certify that the option is 'distribuido=False' instead of 'distribuido=True'
 
     3. Now, you can run GA in master node with the command:
 
