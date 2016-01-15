@@ -1,0 +1,9 @@
+Cromossomo: 2 10 0 50 0 0.1 0.8 0.4 300  - Validacao: 0.002185
+Cromossomo: 2 10 0 50 0 0.1 0.8 0.7 300  - Validacao: 0.002203
+Cromossomo: 2 10 0 38 0 0.1 0.8 0.1 300  - Validacao: 0.00225
+Cromossomo: 2 10 0 50 0 0.1 0.8 0.4 300  - Validacao: 0.002269
+Cromossomo: 2 10 0 50 0 0.1 0.8 0.4 300  - Validacao: 0.002285
+Cromossomo: 2 10 0 50 0 0.1 0.8 0.2 300  - Validacao: 0.002286
+Cromossomo: 2 10 0 50 0 0.1 0.8 0.8 300  - Validacao: 0.00229
+Cromossomo: 2 10 0 38 0 0.1 0.8 0.2 300  - Validacao: 0.002292
+Cromossomo: 2 10 0 50 0 0.1 0.8 0.7 300  - Validacao: 0.002292

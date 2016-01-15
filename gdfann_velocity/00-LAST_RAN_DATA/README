@@ -1,0 +1,6 @@
+To untar the ANN_Created_by_this_node.tar.bz2 file, do:
+    cat ANN_Created_by_this_node/ANN_Created_by_this_node-* > ANN_Created_by_this_node.tar.bz2
+    tar xvjf ANN_Created_by_this_node.tar.bz2
+
+Some '.net' files were not used because their configuration was not acceptable by FANN.
+When it occurred, the respective individual fitness was defined to 999.0
