@@ -12,3 +12,14 @@ To create the graphs (and see results here), you have to do:
 
     note: to generate the plots with efforts, use:
         ./utils/04-gen_plots-with_effort.sh
+
+
+IMPORTANT:
+
+      You have to install FANN library to run the code.
+         - In Debian based system (like Ubuntu): apt-get install libfann-dev
+         
+      The first FANN version doesn't need two lines inside ".net" file.
+      If you will use this version, please remove the following lines inside ".net" files:
+         cascade_min_out_epochs=10
+         cascade_min_cand_epochs=10
