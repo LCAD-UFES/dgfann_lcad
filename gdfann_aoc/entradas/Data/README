@@ -1,0 +1,2 @@
+Criação de todos_dados.txt:
+    cat results_pid/results_pid-steering-20140324-* > todos_dados.txt
