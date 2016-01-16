@@ -27,7 +27,7 @@ for i in $DIR_RNAS/*;do
     N=${N%%-*}
     ./$TESTE_RNA $i $ARQ_TESTES > $DIR_OUTPUTS/teste_RNA-$N.txt
     for PED in 1 4 8;do
-        ./utils/03-org_graph.py $PED <(grep ^Resultado $DIR_OUTPUTS/teste_RNA-${N}.txt) $DIR_OUTPUTS/teste_RNA-${N}_${PED}.txt
+        ./utils/03-org_graph.py $PED $DIR_OUTPUTS/teste_RNA-${N}.txt $DIR_OUTPUTS/teste_RNA-${N}_${PED}.txt
         MSE=$(awk '{if ($5 == "Mean") print $NF}' $DIR_OUTPUTS/teste_RNA-${N}.txt)
         ARQ="$DIR_OUTPUTS/teste_RNA-${N}_${PED}.txt"
         echo "set term pngcairo font 'Times New Roman,10';
