@@ -9,16 +9,22 @@
 
 [ ! -f ./utils/teste_RNA_with_effort ] && make teste_RNA_with_effort
 
-DIR_OUTPUTS='results_tests'
-DIR_PLOTS='results_plots'
-ARQ_TESTES=$(python -c 'from config import nomeArqTeste;print nomeArqTeste') 
+#PATTERNS_FILENAME='nomeArqTreino'
+#PATTERNS_FILENAME='nomeArqValidacao'
+PATTERNS_FILENAME='nomeArqTeste'
+PATTERNS_FILE=$(python -c "from config import $PATTERNS_FILENAME;print $PATTERNS_FILENAME") 
+
+DIR_OUTPUTS="results_${PATTERNS_FILENAME#nomeArq}-ann"
+DIR_PLOTS="results_${PATTERNS_FILENAME#nomeArq}-plots"
+
+echo "Using '$PATTERNS_FILE'. The results will be saved in folder '$DIR_OUTPUTS' and '$DIR_PLOTS'..."
 
 mkdir -p $DIR_OUTPUTS $DIR_PLOTS
 
 for i in ../RNAs/*;do
     N=`basename ${i}`
     N=${N%%-*}
-    ./utils/teste_RNA_with_effort $i $ARQ_TESTES > $DIR_OUTPUTS/teste_RNA-$N.txt
+    ./utils/teste_RNA_with_effort $i $PATTERNS_FILE > $DIR_OUTPUTS/teste_RNA-$N.txt
     for PED in 1 4 8;do
         ./utils/03-org_graph.py $PED $DIR_OUTPUTS/teste_RNA-${N}.txt $DIR_OUTPUTS/teste_RNA-${N}_${PED}.txt
         MSE=$(awk '{if ($5 == "Mean") print $NF}' $DIR_OUTPUTS/teste_RNA-${N}.txt)
