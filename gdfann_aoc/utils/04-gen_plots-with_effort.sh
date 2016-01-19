@@ -17,10 +17,9 @@ PATTERNS_FILE=$(python -c "from config import $PATTERNS_FILENAME;print $PATTERNS
 DIR_OUTPUTS="results_${PATTERNS_FILENAME#nomeArq}-ann"
 DIR_PLOTS="results_${PATTERNS_FILENAME#nomeArq}-plots"
 
-
-PATTERNS_FILE='entradas_aux/steering-20140509-2.fann'
-DIR_OUTPUTS='results_ann_20140509-2'
-DIR_PLOTS='results_plot_20140509-2'
+PATTERNS_FILE='entradas_aux/steering-20140802-1.fann'
+DIR_OUTPUTS='results_ann_20140802-1'
+DIR_PLOTS='results_plot_20140802-1'
 
 echo "Using '$PATTERNS_FILE'. The results will be saved in folder '$DIR_OUTPUTS' and '$DIR_PLOTS'..."
 
@@ -34,16 +33,19 @@ for i in ../RNAs/*;do
         ./utils/03-org_graph.py $PED $DIR_OUTPUTS/teste_RNA-${N}.txt $DIR_OUTPUTS/teste_RNA-${N}_${PED}.txt
         MSE=$(awk '{if ($5 == "Mean") print $NF}' $DIR_OUTPUTS/teste_RNA-${N}.txt)
         ARQ="$DIR_OUTPUTS/teste_RNA-${N}_${PED}.txt"
-        echo "set term pngcairo font 'Times New Roman,10' size 1920,1080;
+        echo "set term pngcairo font 'Times New Roman,18' size 1920,1280;
               set output '${DIR_PLOTS}/figura_${N}_${PED}.png';
-              set y2tics out
-              set tics out
+              set multiplot layout 2,1
               set title 'ANN (MSE: $MSE) $N 1/${PED}';
+              set xlabel 'Samples'
+              set ylabel 'Curvature (rad)'
               plot \
                    '$ARQ' using 2 axes x1y1 title 'Estimated' with lines lc rgb '#ff0000', \
                    '$ARQ' using 4 axes x1y1 title 'Desired' with lines lc rgb '#0000ff', \
-                   '$ARQ' using 6 axes x1y1 title 'Error' with lines lc rgb '#00ff00', \
-                   '$ARQ' using 8 axes x2y2 title 'Curvature' with lines lc rgb '#999944' lt 1 lw 0.5 \
+                   '$ARQ' using 6 axes x1y1 title 'Error' with lines lc rgb '#00ff00'
+              unset title
+              set ylabel 'Curvature Effort (rad)'
+              plot '$ARQ' using 8 title 'Curvature Effort' with lines lc rgb '#999944'
                    " | gnuplot
     done
 
