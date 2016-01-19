@@ -17,9 +17,9 @@ PATTERNS_FILE=$(python -c "from config import $PATTERNS_FILENAME;print $PATTERNS
 DIR_OUTPUTS="results_${PATTERNS_FILENAME#nomeArq}-ann"
 DIR_PLOTS="results_${PATTERNS_FILENAME#nomeArq}-plots"
 
-PATTERNS_FILE='entradas_aux/velocity-20140509-2.fann'
-DIR_OUTPUTS='results_ann_20140509-2'
-DIR_PLOTS='results_plot_20140509-2'
+PATTERNS_FILE='entradas_aux/velocity-20140802-1.fann'
+DIR_OUTPUTS='results_ann_20140802-1'
+DIR_PLOTS='results_plot_20140802-1'
 
 echo "Using '$PATTERNS_FILE'. The results will be saved in folder '$DIR_OUTPUTS' and '$DIR_PLOTS'..."
 
@@ -33,19 +33,20 @@ for i in ../RNAs/*;do
         ./utils/03-org_graph.py $JUMP $DIR_OUTPUTS/teste_RNA-${N}.txt $DIR_OUTPUTS/teste_RNA-${N}_${JUMP}.txt
         MSE=$(awk '{if ($5 == "Mean") print $NF}' $DIR_OUTPUTS/teste_RNA-${N}.txt)
         ARQ="$DIR_OUTPUTS/teste_RNA-${N}_${JUMP}.txt"
-        echo "set term pngcairo font 'Times New Roman,10' size 1920,1080;
+        echo "set term pngcairo font 'Times New Roman,18' size 1920,1280;
               set output '${DIR_PLOTS}/ANN_${N}_1:${JUMP}.png';
-              set y2tics out
-              set tics out
+              set multiplot layout 2,1
               set title 'ANN (MSE: $MSE) $N 1/${JUMP}'
               set xlabel 'Samples'
               set ylabel 'Velocity and Error (m/s)'
-              set y2label 'Trhottle and Brake Efforts'
-              plot '$ARQ' using  2 axes x1y1 title 'Estimated' with lines lc rgb '#ff0000', \
-                   '$ARQ' using  4 axes x1y1 title 'Desired' with lines lc rgb '#0000ff', \
-                   '$ARQ' using  6 axes x1y1 title 'Error' with lines lc rgb '#00ff00', \
-                   '$ARQ' using  8 axes x2y2 title 'Throttle' with lines lc rgb '#e46c0a', \
-                   '$ARQ' using 10 axes x2y2 title 'Brake' with lines lc rgb '#555555'
+              plot '$ARQ' using  2 title 'Estimated' with lines lc rgb '#ff0000', \
+                   '$ARQ' using  4 title 'Desired' with lines lc rgb '#0000ff', \
+                   '$ARQ' using  6 title 'Error' with lines lc rgb '#00ff00'
+              unset title
+              set xlabel 'Samples'
+              set ylabel 'Trhottle and Brake Efforts'
+              plot '$ARQ' using  8 title 'Throttle' with lines lc rgb '#e46c0a', \
+                   '$ARQ' using 10 title 'Brake' with lines lc rgb '#555555'
              " | gnuplot
     done
 
