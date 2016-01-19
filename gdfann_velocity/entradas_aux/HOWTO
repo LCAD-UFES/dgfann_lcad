@@ -1,0 +1,72 @@
+== Arquivo: 20140802-1 ==
+
+No diretório 'gdfann_aoc/entradas_aux':
+
+   grep VELOCITY orig/results_pid-20140802-1.txt > results_pid-velocity-20140802-1.txt
+   ./gerarEntrada results_pid-velocity-20140802-1.txt 120 > velocity-20140802-1.fann
+
+No diretório 'gdfann_aoc':
+
+ * Edite o arquivo 'utils/04-gen_plots-with_effort.sh' e mude-o para:
+   PATTERNS_FILE='entradas_aux/velocity-20140802-1.fann'
+   DIR_OUTPUTS='results_ann_20140802-1'
+   DIR_PLOTS='results_plot_20140802-1'
+
+ * cp 00-LAST_RAN_DATA/Resultado_Alg-Genetico.txt ./
+
+ * rm -rf ../RNAs
+
+ * ./utils/01-copiar_redes.sh
+   (olhe a 'Nota' abaixo)
+
+ * ./utils/04-gen_plots-with_effort.sh
+
+ * Agora veja os resultados em: 'results_ann_20140802-1', 'results_plot_20140802-1'
+
+ * E gere o '.csv':
+   cd results_ann_20140802-1
+   ../utils/Criar_csv.py teste_RNA-001_1.txt ANN_Results-20140802-1
+
+Nota:
+ O script '01-copiar_redes.sh' copia todas as redes da última população para ../RNAs
+ Se quiser que os resultados e testes sejam feitos somente com a primeira RNA,
+ apague as redes não desejadas em ../RNAs
+ Ex: rm -f ../RNAs/00[23456789]*
+
+....................................................................................
+....................................................................................
+
+== Arquivo: 20140509-2 ==
+
+No diretório 'gdfann_aoc/entradas_aux':
+
+   grep VELOCITY orig/results_pid-20140509-2.txt > results_pid-velocity-20140509-2.txt
+   ./gerarEntrada results_pid-velocity-20140509-2.txt 120 > velocity-20140509-2.fann
+
+No diretório 'gdfann_aoc':
+
+ * Edite o arquivo 'utils/04-gen_plots-with_effort.sh' e mude-o para:
+   PATTERNS_FILE='entradas_aux/velocity-20140509-2.fann'
+   DIR_OUTPUTS='results_ann_20140509-2'
+   DIR_PLOTS='results_plot_20140509-2'
+
+ * cp 00-LAST_RAN_DATA/Resultado_Alg-Genetico.txt ./
+
+ * rm -rf ../RNAs
+
+ * ./utils/01-copiar_redes.sh
+   (olhe a 'Nota' abaixo)
+
+ * ./utils/04-gen_plots-with_effort.sh
+
+ * Agora veja os resultados em: 'results_ann_20140509-2', 'results_plot_20140509-2'
+
+ * E gere o '.csv':
+   cd results_ann_20140509-2
+   ../utils/Criar_csv.py teste_RNA-001_1.txt ANN_Results-20140509-2
+
+Nota:
+ O script '01-copiar_redes.sh' copia todas as redes da última população para ../RNAs
+ Se quiser que os resultados e testes sejam feitos somente com a primeira RNA,
+ apague as redes não desejadas em ../RNAs
+ Ex: rm -f ../RNAs/00[23456789]*
