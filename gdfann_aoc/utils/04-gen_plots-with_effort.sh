@@ -17,6 +17,11 @@ PATTERNS_FILE=$(python -c "from config import $PATTERNS_FILENAME;print $PATTERNS
 DIR_OUTPUTS="results_${PATTERNS_FILENAME#nomeArq}-ann"
 DIR_PLOTS="results_${PATTERNS_FILENAME#nomeArq}-plots"
 
+
+PATTERNS_FILE='entradas_aux/steering-20140509-2.fann'
+DIR_OUTPUTS='results_ann_20140509-2'
+DIR_PLOTS='results_plot_20140509-2'
+
 echo "Using '$PATTERNS_FILE'. The results will be saved in folder '$DIR_OUTPUTS' and '$DIR_PLOTS'..."
 
 mkdir -p $DIR_OUTPUTS $DIR_PLOTS
@@ -29,14 +34,16 @@ for i in ../RNAs/*;do
         ./utils/03-org_graph.py $PED $DIR_OUTPUTS/teste_RNA-${N}.txt $DIR_OUTPUTS/teste_RNA-${N}_${PED}.txt
         MSE=$(awk '{if ($5 == "Mean") print $NF}' $DIR_OUTPUTS/teste_RNA-${N}.txt)
         ARQ="$DIR_OUTPUTS/teste_RNA-${N}_${PED}.txt"
-        echo "set term pngcairo font 'Times New Roman,10' size 1024,768;
+        echo "set term pngcairo font 'Times New Roman,10' size 1920,1080;
               set output '${DIR_PLOTS}/figura_${N}_${PED}.png';
+              set y2tics out
+              set tics out
               set title 'ANN (MSE: $MSE) $N 1/${PED}';
               plot \
-                   '$ARQ' using 2 title 'Estimated' with lines lc rgb '#ff0000', \
-                   '$ARQ' using 4 title 'Desired' with lines lc rgb '#00ff00', \
-                   '$ARQ' using 6 title 'Error' with lines lc rgb '#0000ff', \
-                   '$ARQ' using 8 title 'Curvature/200' with lines lc rgb '#007cad' lt 1 lw 0.5 \
+                   '$ARQ' using 2 axes x1y1 title 'Estimated' with lines lc rgb '#ff0000', \
+                   '$ARQ' using 4 axes x1y1 title 'Desired' with lines lc rgb '#0000ff', \
+                   '$ARQ' using 6 axes x1y1 title 'Error' with lines lc rgb '#00ff00', \
+                   '$ARQ' using 8 axes x2y2 title 'Curvature' with lines lc rgb '#999944' lt 1 lw 0.5 \
                    " | gnuplot
     done
 
