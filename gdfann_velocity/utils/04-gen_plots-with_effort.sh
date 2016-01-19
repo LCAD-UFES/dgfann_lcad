@@ -34,7 +34,7 @@ for i in ../RNAs/*;do
         MSE=$(awk '{if ($5 == "Mean") print $NF}' $DIR_OUTPUTS/teste_RNA-${N}.txt)
         ARQ="$DIR_OUTPUTS/teste_RNA-${N}_${JUMP}.txt"
         echo "set term pngcairo font 'Times New Roman,18' size 1920,1280;
-              set output '${DIR_PLOTS}/ANN_${N}_1:${JUMP}.png';
+              set output '${DIR_PLOTS}/ANN_${N}_${JUMP}.png';
               set multiplot layout 2,1
               set title 'ANN (MSE: $MSE) $N 1/${JUMP}'
               set xlabel 'Samples'
