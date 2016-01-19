@@ -42,7 +42,7 @@ main(int argc, char **argv)
 
 		printf("ANN: %f ", calc_out[0]);
 		printf("Expected: %f ", data->output[i][0]);
-        printf("Error: %f\n", (float) (data->output[i][0] - calc_out[0]);
+        printf("Error: %f\n", (float) (data->output[i][0] - calc_out[0]));
         error += (float) powf(fann_abs(calc_out[0] - data->output[i][0]),2);
 	}
 
