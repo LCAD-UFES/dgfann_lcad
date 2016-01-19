@@ -17,6 +17,10 @@ PATTERNS_FILE=$(python -c "from config import $PATTERNS_FILENAME;print $PATTERNS
 DIR_OUTPUTS="results_${PATTERNS_FILENAME#nomeArq}-ann"
 DIR_PLOTS="results_${PATTERNS_FILENAME#nomeArq}-plots"
 
+PATTERNS_FILE='entradas_aux/velocity-20140509-2.fann'
+DIR_OUTPUTS='results_ann_20140509-2'
+DIR_PLOTS='results_plot_20140509-2'
+
 echo "Using '$PATTERNS_FILE'. The results will be saved in folder '$DIR_OUTPUTS' and '$DIR_PLOTS'..."
 
 mkdir -p $DIR_OUTPUTS $DIR_PLOTS
@@ -29,14 +33,20 @@ for i in ../RNAs/*;do
         ./utils/03-org_graph.py $JUMP $DIR_OUTPUTS/teste_RNA-${N}.txt $DIR_OUTPUTS/teste_RNA-${N}_${JUMP}.txt
         MSE=$(awk '{if ($5 == "Mean") print $NF}' $DIR_OUTPUTS/teste_RNA-${N}.txt)
         ARQ="$DIR_OUTPUTS/teste_RNA-${N}_${JUMP}.txt"
-        echo "set term pngcairo font 'Times New Roman,10' size 1024,768;
-              set output '${DIR_PLOTS}/figura_${N}_${JUMP}.png';
-              set title 'ANN (MSE: $MSE) $N 1/${JUMP}';
-              plot '$ARQ' using 2 title 'Estimated' with lines, \
-                   '$ARQ' using 4 title 'Desired' with lines, \
-                   '$ARQ' using 6 title 'Error' with lines, \
-                   '$ARQ' using 8 title 'Throttle/10' with lines lc rgb '#007cad', \
-                   '$ARQ' using 10 title 'Brake/100' with lines lc rgb '#0fdd11'" | gnuplot
+        echo "set term pngcairo font 'Times New Roman,10' size 1920,1080;
+              set output '${DIR_PLOTS}/ANN_${N}_1:${JUMP}.png';
+              set y2tics out
+              set tics out
+              set title 'ANN (MSE: $MSE) $N 1/${JUMP}'
+              set xlabel 'Samples'
+              set ylabel 'Velocity and Error (m/s)'
+              set y2label 'Trhottle and Brake Efforts'
+              plot '$ARQ' using  2 axes x1y1 title 'Estimated' with lines lc rgb '#ff0000', \
+                   '$ARQ' using  4 axes x1y1 title 'Desired' with lines lc rgb '#0000ff', \
+                   '$ARQ' using  6 axes x1y1 title 'Error' with lines lc rgb '#00ff00', \
+                   '$ARQ' using  8 axes x2y2 title 'Throttle' with lines lc rgb '#e46c0a', \
+                   '$ARQ' using 10 axes x2y2 title 'Brake' with lines lc rgb '#555555'
+             " | gnuplot
     done
 
 done
