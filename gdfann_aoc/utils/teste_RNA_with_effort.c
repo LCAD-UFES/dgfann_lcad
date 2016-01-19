@@ -39,7 +39,9 @@ main(int argc, char **argv)
 		printf("ANN: %f ", calc_out[0]);
 		printf("Expected: %f ", data->output[i][0]);
 		printf("Error: %f ", (float) (data->output[i][0] -calc_out[0]));
-        printf("Steering_Effort: %f Current_Curvature: %f\n", data->input[i][80-2], data->input[i][80-1]);
+        printf("Steering_Effort: %f Current_Curvature: %f\n",
+                // essa multiplicacao ocorre para desfazer o que o 'gerarEntrada.c' fez
+                data->input[i][80-2]*100, data->input[i][80-1]);
         error += (float) powf(fann_abs(calc_out[0] - data->output[i][0]),2);
 	}
 

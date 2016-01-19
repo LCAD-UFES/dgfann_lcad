@@ -39,7 +39,9 @@ main(int argc, char **argv)
 		printf("ANN: %f ", calc_out[0]);
 		printf("Expected: %f ", data->output[i][0]);
 		printf("Error: %f ", (float) (data->output[i][0] -calc_out[0]));
-        printf("Throttle_Effort: %f Brake_Effort: %f Current_Velocity: %f\n", data->input[i][360-3], data->input[i][360-2], data->input[i][360-1]);
+        printf("Throttle_Effort: %f Brake_Effort: %f Current_Velocity: %f\n",
+                // essa multiplicacao ocorre para desfazer o que o 'gerarEntrada.c' fez
+                data->input[i][360-3]*100.0, data->input[i][360-2]*100.0, data->input[i][360-1]*5.0);
         error += (float) powf(fann_abs(calc_out[0] - data->output[i][0]),2);
 	}
 
