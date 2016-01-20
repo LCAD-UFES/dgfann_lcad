@@ -24,6 +24,7 @@ To install our genetic algorithm framework (dgfann) in Ubuntu:
 ```
 * Install dgfann
   * sudo pip install jsonrpclib
+  * sudo apt-get install python-pyfann
   * sudo apt-get install gnuplot-x11
   * git clone https://github.com/LCAD-UFES/dgfann_lcad.git
 
@@ -65,13 +66,13 @@ For running the genetic algorithm in a single machine to configure and train the
 ```sh
   cd dgfann_lcad/dgfann_velocity
 ```
-2. Set the parameters of this network in the file config.py
-2. Create the datasets and the GA individual's evaluator:
+2. Set the parameters of this network in the file config.py (already set according to [1])
+3. Create the datasets and the GA individual's evaluator:
 ```sh
   make
 ```
-2. In RNAGenetico.py, make shure you have 'distribuido=False' 
-3. Run GA with the command:
+4. In RNAGenetico.py, make shure you have 'distribuido=False' 
+5. Run GA with the command:
 ```sh
   ./RNAGenetico.py
 ```
