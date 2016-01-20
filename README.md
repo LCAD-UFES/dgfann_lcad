@@ -28,4 +28,5 @@ TODO: descrever os datasets (tamanho e formato).
 
 ## Additional data and experiments
 
+## References
 [1] Alberto F. De Souza, Jacson Rodrigues Correia da Silva, Filipe Mutz, Claudine Badue, Thiago Oliveira-Santos, "Simulating Robotic Cars Using Multi-Layer Neural Networks", submitted to IJCNN'2016.
