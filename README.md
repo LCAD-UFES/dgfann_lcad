@@ -26,20 +26,24 @@ Note: An initial version of dgfann can be found at https://github.com/jeiks/gdfa
 
 ## Data sets employed in [1]
 
-In [1], we have used IARA (Fig. 1, above) to collect samples for building a training and a test datasets, T<sub>v</sub> and T<sub>c</sub> (see sections III.B and III.C of [1]). For that, we have set IARA to run autonomously in typical operating situations and logged data according with T<sub>v</sub> and T<sub>c</sub> descriptions, with k = 120 for T<sub>v</sub> and k = 40 for T<sub>c</sub>. The number of input-output pairs, n, collected for T<sub>v</sub> was equal to 5,369, and for T<sub>c</sub> was equal to 7,686. After data collection, each dataset was shuffled and split into two parts, (a) and (b), where (a) received 1/3 of the samples and (b) 2/3 of the samples. Part (a) was used as the test sets, T<sub>v</sub><sup>te</sup> and T<sub>c</sub><sup>te</sup>, while part (b) was divided into the training (2/3 of (b)), T<sub>v</sub><sup>tr</sup> and T<sub>c</sub><sup>tr</sup>, and validation (1/3 of (b)), T<sub>v</sub><sup>va</sup> and T<sub>c</sub><sup>va</sup>, sets. 
+In [1], we have used IARA (Fig. 1, above) to collect samples for building a training and a test datasets, T<sub>v</sub> and T<sub>c</sub> (see sections III.B and III.C of [1]). For that, we have set IARA to run autonomously in typical operating situations and logged data according with T<sub>v</sub> and T<sub>c</sub> descriptions, with k = 120 for T<sub>v</sub> and k = 40 for T<sub>c</sub>. The number of input-output pairs, n, collected for T<sub>v</sub> was equal to 5,366, and for T<sub>c</sub> was equal to 7,683. After data collection, each dataset was shuffled and split into two parts, (a) and (b), where (a) received 1/3 of the samples and (b) 2/3 of the samples. Part (a) was used as the test sets, T<sub>v</sub><sup>te</sup> and T<sub>c</sub><sup>te</sup>, while part (b) was divided into the training (2/3 of (b)), T<sub>v</sub><sup>tr</sup> and T<sub>c</sub><sup>tr</sup>, and validation (1/3 of (b)), T<sub>v</sub><sup>va</sup> and T<sub>c</sub><sup>va</sup>, sets. 
 
 These datasets are part of this repository:
 
-- [T<sub>v</sub><sup>te</sup>](dgfann_velocity/entradas/treino.train)
-- T<sub>c</sub><sup>te</sup>
-- T<sub>v</sub><sup>tr</sup>
-- T<sub>c</sub><sup>tr</sup>
-- T<sub>v</sub><sup>va</sup>
-- T<sub>c</sub><sup>va</sup>
+- [T<sub>v</sub><sup>te</sup>](dgfann_velocity/entradas/testes.train)
+- [T<sub>c</sub><sup>te</sup>](dgfann_aoc/entradas/testes.train)
+- [T<sub>v</sub><sup>tr</sup>](dgfann_velocity/entradas/treino.train)
+- [T<sub>c</sub><sup>tr</sup>](dgfann_aoc/entradas/treino.train)
+- [T<sub>v</sub><sup>va</sup>](dgfann_velocity/entradas/validacao.train)
+- [T<sub>c</sub><sup>va</sup>](dgfann_aoc/entradas/validacao.train)
 
-All T<sub>v</sub> datasets follow the format:
-
-All T<sub>c</sub> datasets follow the format:
+All T<sub>v</sub> and T<sub>c</sub> datasets follow the format:
+```
+"Samples number" "Network input size" "Network output size"
+sample 1
+...
+sample n
+```
 
 ## How to use the dgfann to find configurations of neural networks (NN) and train these NNs
 
