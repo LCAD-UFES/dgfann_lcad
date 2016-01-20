@@ -16,7 +16,10 @@ We evaluated the performance of our simulator using real-world datasets acquired
 
 To install our genetic algorithm framework (dgfann) in Ubuntu:
 
-1. Install fann (https://github.com/libfann/fann)
+1. Install fann (http://leenissen.dk)
+```sh
+  sudo apt-get install libfann-dev
+```
 2. Install dgfann
   1. git clone https://github.com/LCAD-UFES/dgfann_lcad.git
   2. sudo apt-get install python-jsonrpclib
