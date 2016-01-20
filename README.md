@@ -15,6 +15,7 @@ We evaluated the performance of our simulator using real-world datasets acquired
 ## Installing dgfann
 
 To install our genetic algorithm framework (dgfann):
+
 1. Install fann (https://github.com/libfann/fann)
 2. Install dgfann
 
