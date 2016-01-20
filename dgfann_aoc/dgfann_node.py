@@ -6,7 +6,7 @@ from algoritmoGenetico.Populacao import Populacao
 from algoritmoGenetico.Cromossomo import Cromossomo
 from config_cromossomo import avaliacaoRNA    
 
-class GDFANN_Node:
+class DGFANN_Node:
     def __init__(self, domain='0.0.0.0', port=5000):
         self._server = SimpleJSONRPCServer( (domain, port) )
         functions = {
@@ -46,5 +46,5 @@ class GDFANN_Node:
             print 'Exiting'
 
 if __name__ == "__main__":
-    server = GDFANN_Node()
+    server = DGFANN_Node()
     server.serve()

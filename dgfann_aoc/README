@@ -10,7 +10,7 @@ To start the process, you have to:
 
         2.2.1. Copy this folder (after run 'make') to each node that you will use.
 
-        2.2.2. In each node, execute: './gdfann_node.py' or 'python gdfann_node.py'
+        2.2.2. In each node, execute: './dgfann_node.py' or 'python dgfann_node.py'
 
         2.2.3. Open the file 'config.py' in master node, and set a array with the IP nodes:
 
@@ -28,23 +28,23 @@ To start the process, you have to:
 
     4. When finished, you have to do this to distributed run:
 
-        4.1. Copy the gdfann folder from all nodes to master. Put all these folders in gdfann parent folder.
+        4.1. Copy the dgfann folder from all nodes to master. Put all these folders in dgfann parent folder.
 
             Ex.: parent_folder/
 
-                    01-gdfann
+                    01-dgfann
 
-                    02-gdfann
+                    02-dgfann
 
                     ...
 
-                    nn-gdfann
+                    nn-dgfann
 
     5. Now, you can separe the Neural Networks created by the last population with the command:
 
         ./utils/01-copiar_redes.sh
 
-        Run it inside the master gdfann node, because it uses the file 'Resultado_Alg-Genetico.txt'
+        Run it inside the master dgfann node, because it uses the file 'Resultado_Alg-Genetico.txt'
         
         to found the Neural Networks.
 

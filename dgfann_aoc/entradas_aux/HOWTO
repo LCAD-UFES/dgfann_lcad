@@ -1,11 +1,11 @@
 == Arquivo: 20140802-1 ==
 
-No diretório 'gdfann_aoc/entradas_aux':
+No diretório 'dgfann_aoc/entradas_aux':
 
    grep STEERING orig/results_pid-20140802-1.txt > results_pid-steering-20140802-1.txt
    ./gerarEntrada results_pid-steering-20140802-1.txt 40 > steering-20140802-1.fann
 
-No diretório 'gdfann_aoc':
+No diretório 'dgfann_aoc':
 
  * Edite o arquivo 'utils/04-gen_plots-with_effort.sh' e mude-o para:
    PATTERNS_FILE='entradas_aux/steering-20140802-1.fann'
@@ -39,12 +39,12 @@ Nota:
 
 == Arquivo: 20140509-2 ==
 
-No diretório 'gdfann_aoc/entradas_aux':
+No diretório 'dgfann_aoc/entradas_aux':
 
    grep STEERING orig/results_pid-20140509-2.txt > results_pid-steering-20140509-2.txt
    ./gerarEntrada results_pid-steering-20140509-2.txt 40 > steering-20140509-2.fann
 
-No diretório 'gdfann_aoc':
+No diretório 'dgfann_aoc':
 
  * Edite o arquivo 'utils/04-gen_plots-with_effort.sh' e mude-o para:
    PATTERNS_FILE='entradas_aux/steering-20140509-2.fann'
