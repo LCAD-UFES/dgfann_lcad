@@ -161,16 +161,17 @@ Ex.: 001-2_10_0_50_0_0.1_0.8_0.4_300.net means:
 300: maximum epochs to train
 ```
 
-**To run GC to the AOC neural netowork, repeat the same process using the 'dgfann_aoc' directory instead of the 'dgfann_velocity' directory.**
+**To run GC to the AOC neural network, repeat the same process using the 'dgfann_aoc' directory instead of the 'dgfann_velocity' directory.**
 
 ## How to run your NNs and see the results
-
-You can test your NNs with the test set and build plots with:
+* In the master node, run the Velocity neural networks with the test set (it is defined in the file 'config.py', variable 'nomeArqTeste'):
 ```
-    ./utils/02-gen_plots.sh
-    # the plots will be placed in 'results_plots'
-    # the neural outputs will be placed in 'results_ann'
+cd dgfann_lcad/dgfann_velocity
+./utils/02-gen_plots.sh
+# the plots will be placed in 'results_plots'
+# the neural outputs will be placed in 'results_ann'
 ```
+* To AOC neural network, run the same command, but in directory 'dfgann_aoc' instead of 'dgfann_velocity'.
 
 ## Additional data and experiments
 
