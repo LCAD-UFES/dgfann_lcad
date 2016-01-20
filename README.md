@@ -14,13 +14,15 @@ We evaluated the performance of our simulator using real-world datasets acquired
 
 ## Installing dgfann
 
-To install our genetic algorithm framework (dgfann):
+To install our genetic algorithm framework (dgfann) in Ubuntu:
 
 1. Install fann (https://github.com/libfann/fann)
 2. Install dgfann
-3.1 git clone 
+  1. git clone https://github.com/LCAD-UFES/dgfann_lcad.git
+  2. sudo apt-get install python-jsonrpclib
+  3. sudo apt-get install gnuplot-x11
 
-Note: The original project is from https://github.com/jeiks/gdfann
+Note: An initial version of dgfann can be found at https://github.com/jeiks/gdfann
 
 ## Data sets employed in [1]
 
@@ -28,7 +30,7 @@ In [1], we have used IARA (Fig. 1, above) to collect samples for building a trai
 
 These datasets are part of this repository:
 
-- T<sub>v</sub><sup>te</sup>
+- [T<sub>v</sub><sup>te</sup>](dgfann_velocity/entradas/treino.train)
 - T<sub>c</sub><sup>te</sup>
 - T<sub>v</sub><sup>tr</sup>
 - T<sub>c</sub><sup>tr</sup>
