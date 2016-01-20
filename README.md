@@ -38,16 +38,21 @@ These datasets are part of this repository:
 - [T<sub>c</sub><sup>va</sup>](dgfann_aoc/entradas/validacao.train)
 
 All T<sub>v</sub> and T<sub>c</sub> datasets follow the format:
+
 ```
-"Samples number" "Network input size" "Network output size"
-sample 1
+# Header: a line with three values: number of samples, network-input size, and network-output size
+<number of samples> <network-input size> <network-output size>
+
+# Samples: <number of samples> lines with <network-input size> values followed by <network-output size> values
+<input 1> <input 2> ... <input <network-input size>> <output 1> <output 2> ... <output <network-output size>>
 ...
-sample n
 ```
+
+Where all T<sub>v</sub> datasets have <network-input size> equal to 360 and <network-output size> equal 1, while all T<sub>c</sub> datasets have <network-input size> equal to 80 and <network-output size> equal 1.
 
 ## How to use the dgfann to find configurations of neural networks (NN) and train these NNs
 
-To start the process, you have to:
+To start the process, you have 
 
 1. Create the datasets and the GA individual's evaluator:
 ```sh
