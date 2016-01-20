@@ -187,35 +187,35 @@ In the parking lot dataset, the neural net was able to successfully estimate the
 
 ![alt text](new_datasets/plots/Velocity_20140509-1.png)
 
-**Fig. 2 Velocity for 2014/05/09 plotted as [1]**
+**Fig. 2. Velocity for 2014/05/09 plotted as [1]**
 
 ![alt text](new_datasets/plots/Velocity_20140509-2.png)
 
-**Fig. 3 Velocity for 2014/05/09 (alternative visualization)**
+**Fig. 3. Velocity for 2014/05/09 (alternative visualization)**
 
 ![alt text](new_datasets/plots/Steering_20140509-1.png)
 
-**Fig. 4 AOC for 2014/05/09 plotted as [1]**
+**Fig. 4. AOC for 2014/05/09 plotted as [1]**
 
 ![alt text](new_datasets/plots/Steering_20140509-2.png)
 
-**Fig. 5 AOC for 2014/05/09 (alternative visualization)**
+**Fig. 5. AOC for 2014/05/09 (alternative visualization)**
 
 ![alt text](new_datasets/plots/Velocity_20140802-1.png)
 
-**Fig. 6 Velocity for 2014/08/02 plotted as [1]**
+**Fig. 6. Velocity for 2014/08/02 plotted as [1]**
 
 ![alt text](new_datasets/plots/Velocity_20140802-2.png)
 
-**Fig. 6 Velocity for 2014/08/02 (alternative visualization)**
+**Fig. 7. Velocity for 2014/08/02 (alternative visualization)**
 
 ![alt text](new_datasets/plots/Steering_20140802-1.png)
 
-**Fig. 6 AOC for 2014/08/02 plotted as [1]**
+**Fig. 8. AOC for 2014/08/02 plotted as [1]**
 
 ![alt text](new_datasets/plots/Steering_20140802-2.png)
 
-**Fig. 6 AOC for 2014/08/02 (alternative visualization)**
+**Fig. 9. AOC for 2014/08/02 (alternative visualization)**
 
 
 The results of the new experiments can be accessed in the following links:
