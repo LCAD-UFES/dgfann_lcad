@@ -26,14 +26,11 @@ for i in $DIR_RNAS/*;do
     N=`basename ${i}`
     N=${N%%-*}
     ./$TESTE_RNA $i $ARQ_TESTES > $DIR_OUTPUTS/teste_RNA-$N.txt
-    for PED in 1 4 8;do
-        ./utils/03-org_graph.py $PED $DIR_OUTPUTS/teste_RNA-${N}.txt $DIR_OUTPUTS/teste_RNA-${N}_${PED}.txt
-        MSE=$(awk '{if ($5 == "Mean") print $NF}' $DIR_OUTPUTS/teste_RNA-${N}.txt)
-        ARQ="$DIR_OUTPUTS/teste_RNA-${N}_${PED}.txt"
-        echo "set term pngcairo font 'Times New Roman,10';
-              set output '${DIR_PLOTS}/figura_${N}_${PED}.png';
-              set title 'ANN $N (MSE: $MSE)';
-              plot '$ARQ' using 2 title 'Estimated' with lines, '$ARQ' using 4 title 'Desired' with lines, '$ARQ' using 6 title 'Error' with lines" | gnuplot
-     done
-
+    ./utils/03-org_graph.py 1 $DIR_OUTPUTS/teste_RNA-${N}.txt $DIR_OUTPUTS/teste_RNA-${N}_1.txt
+    MSE=$(awk '{if ($5 == "Mean") print $NF}' $DIR_OUTPUTS/teste_RNA-${N}.txt)
+    ARQ="$DIR_OUTPUTS/teste_RNA-${N}_1.txt"
+    echo "set term pngcairo font 'Times New Roman,10';
+          set output '${DIR_PLOTS}/figura_${N}.png';
+          set title 'ANN $N (MSE: $MSE)';
+          plot '$ARQ' using 2 title 'Estimated' with lines, '$ARQ' using 4 title 'Desired' with lines, '$ARQ' using 6 title 'Error' with lines" | gnuplot
 done
