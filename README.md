@@ -181,7 +181,49 @@ Two additional datasets were collected to evaluate the generalization level of t
 The first dataset ([dataset1: steering](new_datasets/steering-20140509.tar.bz2), [dataset1: velocity](new_datasets/velocity-20140509.tar.bz2)) was captured in the same parking lot used in the experiments presented in [1], while the second dataset ([dataset2: steering](new_datasets/steering-20140802.tar.bz2), [dataset2: velocity](new_datasets/velocity-20140802.tar.bz2)) was captured in the beltway of the *Universidade Federal do Espírito Santo* (UFES). They were collected respectively at 2014/05/09 and 2014/08/02. In the beltway dataset, the robotic car performed significantly different maneuvers in relation to the parking lot datasets. These new maneuvers represent a constant challenge to the neural net estimation
 process, and in certain points took to the limit the network's extrapolation capacity. 
 
+Fig. 2 (another view in Fig. 3) and Fig. 4 (another view in Fig. 5) show the velocity and AOC data, respectively, for the parking lot dataset along with the estimations made by the best neural network found in [1].
+Fig. 6 (another view in Fig. 7) and Fig. 8 (another view in Fig. 9) show the same data for the beltway dataset.
+In the parking lot dataset, the neural net was able to successfully estimate the car’s velocity and AOC in the whole trajectory of the experiment. In the beltway dataset, on the other hand, the network produced satisfactory results for velocities as high as twice the ones seen in the training phase, but was unable to estimate values higher than that. Although the results demonstrated that the neural network was able to successfully generalize its knowledge to challenging unseen scenarios, the upper bound in the velocity estimations indicates that the neural net achieved its maximum extrapolation level. We believe that training the network with additional high velocity data would attenuate the difference between the neural net predictions and the values measured by the car’s sensors. However, more experiments are necessary to validate this hypothesis.
 
+![alt text](new_datasets/plots/Velocity_20140509-1.png)
+
+**Fig. 2 Velocity for 2014/05/09 plotted as [1]**
+
+![alt text](new_datasets/plots/Velocity_20140509-2.png)
+
+**Fig. 3 Velocity for 2014/05/09 (alternative visualization)**
+
+![alt text](new_datasets/plots/Steering_20140509-1.png)
+
+**Fig. 4 AOC for 2014/05/09 plotted as [1]**
+
+![alt text](new_datasets/plots/Steering_20140509-2.png)
+
+**Fig. 5 AOC for 2014/05/09 (alternative visualization)**
+
+![alt text](new_datasets/plots/Velocity_20140802-1.png)
+
+**Fig. 6 Velocity for 2014/08/02 plotted as [1]**
+
+![alt text](new_datasets/plots/Velocity_20140802-2.png)
+
+**Fig. 6 Velocity for 2014/08/02 (alternative visualization)**
+
+![alt text](new_datasets/plots/Steering_20140802-1.png)
+
+**Fig. 6 AOC for 2014/08/02 plotted as [1]**
+
+![alt text](new_datasets/plots/Steering_20140802-2.png)
+
+**Fig. 6 AOC for 2014/08/02 (alternative visualization)**
+
+
+The results of the new experiments can be accessed in the following links:
+
+* [Steering 2014/05/09](new_datasets/plots/Steering_20140509.txt)
+* [Velocity 2014/05/09](new_datasets/plots/Velocity_20140509.txt)
+* [Steering 2014/08/02](new_datasets/plots/Steering_20140802.txt)
+* [Velocity 2014/08/02](new_datasets/plots/Velocity_20140802.txt)
 
 ## References
 
