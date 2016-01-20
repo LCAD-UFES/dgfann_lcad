@@ -21,9 +21,9 @@ To install our genetic algorithm framework (dgfann) in Ubuntu:
   sudo apt-get install libfann-dev
 ```
 * Install dgfann
-  * git clone https://github.com/LCAD-UFES/dgfann_lcad.git
   * sudo apt-get install python-jsonrpclib
   * sudo apt-get install gnuplot-x11
+  * git clone https://github.com/LCAD-UFES/dgfann_lcad.git
 
 Note: An initial version of dgfann can be found at https://github.com/jeiks/gdfann
 
