@@ -63,7 +63,7 @@ For running the genetic algorithm in a single machine to configure and train the
 
 1. Go to the directory of the Velocity neural network:
 ```sh
-  cd dgfann_velocity
+  cd dgfann_lcad/dgfann_velocity
 ```
 2. Set the parameters of this network in the file config.py
 2. Create the datasets and the GA individual's evaluator:
