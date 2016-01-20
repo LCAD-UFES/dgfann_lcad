@@ -18,6 +18,7 @@ To install our genetic algorithm framework (dgfann):
 
 1. Install fann (https://github.com/libfann/fann)
 2. Install dgfann
+3.1 git clone 
 
 Note: The original project is from https://github.com/jeiks/gdfann
 
