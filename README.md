@@ -175,6 +175,9 @@ cd dgfann_lcad/dgfann_velocity
 
 ## Additional data and experiments
 
+The data used to [1] was collected at 2014/03/20 to the velocity network and at 2014/03/24 to the AOC network.
+
+
 ## References
 
     [1] Alberto F. De Souza, Jacson Rodrigues Correia da Silva, Filipe Mutz, Claudine Badue, Thiago Oliveira-Santos, "Simulating Robotic Cars Using Multi-Layer Neural Networks", submitted to IJCNN'2016.
