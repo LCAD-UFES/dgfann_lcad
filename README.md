@@ -1,6 +1,6 @@
 # dgfann_lcad
 
-dgfann (Distributed Genetic Algorithm framework for optimizing the configuration (number of layers, neuron types, number of neurons, etc.) of the neural networks (NN). dgfann finds  the configurations of NNs and train them using fann (https://github.com/libfann/fann).
+dgfann is a Distributed Genetic Algorithm framework for optimizing the configuration (number of layers, neuron types, number of neurons, etc.) of the neural networks (NN). dgfann finds  the configurations of NNs and train them using fann (https://github.com/libfann/fann).
 
 ## Simulating Robotic Cars Using Multi-Layer Neural Networks
 
