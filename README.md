@@ -71,60 +71,97 @@ For running the genetic algorithm in a single machine to configure and train the
   cd dgfann_lcad/dgfann_velocity
 ```
 * Set the parameters of this network in the file config.py (already set according to [1])
-* Compile the GC C code:
+* Compile the Genetic Code (GC) C code:
 ```sh
   make
 ```
-* In RNAGenetico.py, make shure you have 'distribuido=False' 
+* In RNAGenetico.py, make shure you have 'distribuido=False' in the line:
+```py
+AG = AlgGenetico(tipoGenes, populacaoInicial, avaliacaoRNA, criterioSatisfacao,
+                 considMaiorAvaliacao=False, maxGeracoes=maximoGeracoes, verboso=True, distribuido=False)
+```
 * Run GA with the command:
 ```sh
   ./RNAGenetico.py
 ```
-* Copy the trained NNs of the last GA population (all, if the desired fitness was not achieved, or only those that achieved the desired fitness) to ../RNAs. The file names tell the configuration of each NN (see file ???):
+* Copy the trained NNs of the last GA population (all, if the desired fitness was not achieved, or only those that achieved the desired fitness) to ../RNAs. The file names tell the configuration of each NN:
 ```
   ./utils/01-copiar_redes.sh
 ```
+* The file names tell the configuration of each NN:
+```
+Ex.: 001-2_10_0_50_0_0.1_0.8_0.4_300.net means:
+001: rank of the individual
+  2: number of hidden layers
+ 10: hidden layer(s) activation function
+  0: output layer activation function
+ 50: number of neurons in the hidden layer
+  0: learning algorithm
+0.1: learning rate
+0.8: momentum
+0.4: learning rate decay
+300: maximum epochs to train
+```
 
-For running the genetic algorithm in several machines to configure and train the Velocity neural network [1]:
+For running the genetic algorithm in a cluster [1]:
 
-* Go to the directory of the Velocity neural network:
+* In the master node, go to the directory of the Velocity neural network:
 ```sh
   cd dgfann_lcad/dgfann_velocity
 ```
 * Set the parameters of this network in the file config.py (already set according to [1])
-* Set nodes variable in the file config.py:
+* Add the list of nodes at the end of the file config.py (or update this value if already exists):
 ```py
 nodes = ['192.168.36.78', '192.168.36.79', ...]
 ```
-* Compile the GC C code:
+* Compile the Genetic Code (GC) C code:
 ```sh
   make
 ```
-* In RNAGenetico.py, make shure you have 'distribuido=False' 
-* Run GA with the command:
+* In RNAGenetico.py, make shure you have 'distribuido=True' in the line:
+```py
+AG = AlgGenetico(tipoGenes, populacaoInicial, avaliacaoRNA, criterioSatisfacao,
+                 considMaiorAvaliacao=False, maxGeracoes=maximoGeracoes, verboso=True, distribuido=True)
+```
+* Repeat the installation process for all other nodes.
+* In each node, except the master node, run:
+```
+cd dgfann_lcad/dgfann_velocity
+make
+./dgfann_node.py
+```
+* In the master node, run GA with the command:
 ```sh
   ./RNAGenetico.py
 ```
-* Copy the trained NNs of the last GA population (all, if the desired fitness was not achieved, or only those that achieved the desired fitness) to ../RNAs. The file names tell the configuration of each NN (see file ???):
+* When the program running in the master node ends, stop all nodes processes and copy the folder 'Redes_Geradas' to master. Put all these folders in dgfann parent folder.
+```
+ Ex.: parent_folder/
+         01-dgfann/Redes_Geradas
+         02-dgfann/Redes_Geradas
+         ...
+         nn-dgfann/Redes_Geradas
+```
+* In the master node, copy the trained NNs of the last GA population (all, if the desired fitness was not achieved, or only those that achieved the desired fitness) to ../RNAs.
 ```
   ./utils/01-copiar_redes.sh
 ```
+* The file names tell the configuration of each NN:
+```
+Ex.: 001-2_10_0_50_0_0.1_0.8_0.4_300.net means:
+001: rank of the individual
+  2: number of hidden layers
+ 10: hidden layer(s) activation function
+  0: output layer activation function
+ 50: number of neurons in the hidden layer
+  0: learning algorithm
+0.1: learning rate
+0.8: momentum
+0.4: learning rate decay
+300: maximum epochs to train
+```
 
-3. When finished, if you ran it distributed, copy the dgfann folder from all nodes to master. Put all these folders in dgfann parent folder.
-```
-        Ex.: parent_folder/
-                01-dgfann
-                02-dgfann
-                ...
-                nn-dgfann
-```
-4. Now, inside master dgfann folder, you can get the Neural Networks created by the last population with the command:
-```
-  ./utils/01-copiar_redes.sh
-```
-5. Then, 
-For running the genetic algorithm in a cluster:
-
+**To run GC to the AOC neural netowork, repeat the same process using the 'dgfann_aoc' directory instead of the 'dgfann_velocity' directory.**
 
 ## How to run your NNs and see the results
 
