@@ -23,7 +23,7 @@ Note: The original project is from https://github.com/jeiks/gdfann
 
 ## Data sets employed in [1]
 
-We have used IARA to collect samples for the training and test datasets, Tv and Tc (see sections III.B and III.C). For that, we have set IARA to run autonomously in typical operating situations and logged data according with Tv and Tc descriptions, with k = 120 for Tv and k = 40 for Tc. The number of input-output pairs, n, collected for Tv was equal to 5,369, and for Tc was equal to 7,686. After data collection, each dataset was shuffled and split into two parts, (a) and (b), where (a) received 1/3 of the samples and (b) 2/3 of the samples. Part (a) was used as the test set, while part (b) was divided into the training (2/3 of (b)), and validation (1/3 of (b)) sets. 
+In [1], we have used IARA (Fig. 1, above) to collect samples for building a training and a test datasets, T<sub>v</sub> and Tc (see sections III.B and III.C of [1]). For that, we have set IARA to run autonomously in typical operating situations and logged data according with Tv and Tc descriptions, with k = 120 for Tv and k = 40 for Tc. The number of input-output pairs, n, collected for Tv was equal to 5,369, and for Tc was equal to 7,686. After data collection, each dataset was shuffled and split into two parts, (a) and (b), where (a) received 1/3 of the samples and (b) 2/3 of the samples. Part (a) was used as the test set, while part (b) was divided into the training (2/3 of (b)), and validation (1/3 of (b)) sets. 
 
 TODO: descrever os datasets (tamanho e formato).
 
