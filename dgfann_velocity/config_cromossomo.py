@@ -1,6 +1,10 @@
 #-*- coding: utf-8 -*-
 
-from pyfann import libfann
+try:
+    from pyfann import libfann
+except:
+    from fann2 import libfann
+
 from math import sqrt
 from config import qntNeuroniosEntrada, qntNeuroniosSaida, logFile
 
