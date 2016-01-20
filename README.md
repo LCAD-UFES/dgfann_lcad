@@ -85,6 +85,31 @@ For running the genetic algorithm in a single machine to configure and train the
   ./utils/01-copiar_redes.sh
 ```
 
+For running the genetic algorithm in several machines to configure and train the Velocity neural network [1]:
+
+* Go to the directory of the Velocity neural network:
+```sh
+  cd dgfann_lcad/dgfann_velocity
+```
+* Set the parameters of this network in the file config.py (already set according to [1])
+* Set nodes variable in the file config.py:
+```py
+nodes = ['192.168.36.78', '192.168.36.79', ...]
+```
+* Compile the GC C code:
+```sh
+  make
+```
+* In RNAGenetico.py, make shure you have 'distribuido=False' 
+* Run GA with the command:
+```sh
+  ./RNAGenetico.py
+```
+* Copy the trained NNs of the last GA population (all, if the desired fitness was not achieved, or only those that achieved the desired fitness) to ../RNAs. The file names tell the configuration of each NN (see file ???):
+```
+  ./utils/01-copiar_redes.sh
+```
+
 3. When finished, if you ran it distributed, copy the dgfann folder from all nodes to master. Put all these folders in dgfann parent folder.
 ```
         Ex.: parent_folder/
