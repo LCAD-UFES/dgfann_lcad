@@ -1,6 +1,6 @@
 # dgfann_lcad
 
-dgfann is a Distributed Genetic Algorithm framework for optimizing the configuration (number of layers, neuron types, number of neurons, etc.) of the neural networks (NN). dgfann finds  the configurations of NNs and train them using fann (https://github.com/libfann/fann).
+dgfann is a Distributed Genetic Algorithm framework for optimizing the configuration (number of layers, neuron types, number of neurons, etc.) of the neural networks (NN). dgfann finds  the best configurations of NNs and train them using fann (https://github.com/libfann/fann).
 
 We present dgfann_lcad installation and use here for Ubuntu 12.04.
 
@@ -18,10 +18,14 @@ We evaluated the performance of our simulator using real-world datasets acquired
 
 To install our genetic algorithm framework (dgfann) in Ubuntu:
 
-* Install fann (http://leenissen.dk)
-```sh
-  sudo apt-get install libfann-dev
-```
+* Install fann (http://leenissen.dk  We are using our own fann version due to pull request #64 - https://github.com/libfann/fann/pull/64)
+  * git clone https://github.com/LCAD-UFES/fann.git
+  * cd fann
+  * make .
+  * sudo make install
+  * sudo apt-get install swig
+  * sudo apt-get install python-dev
+  * sudo pip install fann2
 * Install dgfann
   * sudo pip install jsonrpclib
   * sudo apt-get install python-pyfann
@@ -62,20 +66,25 @@ To use the dgfann to find configurations of neural networks (NN) and train these
 
 For running the genetic algorithm in a single machine to configure and train the Velocity neural network [1]:
 
-1. Go to the directory of the Velocity neural network:
+* Go to the directory of the Velocity neural network:
 ```sh
   cd dgfann_lcad/dgfann_velocity
 ```
-2. Set the parameters of this network in the file config.py (already set according to [1])
-3. Create the datasets and the GA individual's evaluator:
+* Set the parameters of this network in the file config.py (already set according to [1])
+* Compile the GC C code:
 ```sh
   make
 ```
-4. In RNAGenetico.py, make shure you have 'distribuido=False' 
-5. Run GA with the command:
+* In RNAGenetico.py, make shure you have 'distribuido=False' 
+* Run GA with the command:
 ```sh
   ./RNAGenetico.py
 ```
+* Copy the trained NNs of the last GA population (all, if the desired fitness was not achieved, or only those that achieved the desired fitness) to ../RNAs. The file names tell the configuration of each NN (see file ???):
+```
+  ./utils/01-copiar_redes.sh
+```
+
 3. When finished, if you ran it distributed, copy the dgfann folder from all nodes to master. Put all these folders in dgfann parent folder.
 ```
         Ex.: parent_folder/
@@ -88,17 +97,18 @@ For running the genetic algorithm in a single machine to configure and train the
 ```
   ./utils/01-copiar_redes.sh
 ```
-5. Then, you can test these Neural Networks with test set and build the plots with:
+5. Then, 
+For running the genetic algorithm in a cluster:
+
+
+## How to run your NNs and see the results
+
+You can test your NNs with the test set and build plots with:
 ```
     ./utils/02-gen_plots.sh
     # the plots will be placed in 'results_plots'
     # the neural outputs will be placed in 'results_ann'
 ```
-
-For running the genetic algorithm in a cluster:
-
-
-## How to run your NNs and see the results
 
 ## Additional data and experiments
 
