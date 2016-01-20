@@ -52,21 +52,21 @@ Where all T<sub>v</sub> datasets have \<network-input size\> equal to 360 and \<
 
 ## How to use the dgfann to find configurations of neural networks (NN) and train these NNs
 
-To start the process, you have 
+To use the dgfann to find configurations of neural networks (NN) and train these NNs follow the steps below. 
 
-1. Create the datasets and the GA individual's evaluator:
+For running the genetic algorithm in a single machine to configure and train the Velocity neural network [1]:
+
+1. Go to the directory of the Velocity neural network:
+```sh
+  cd dgfann_velocity
+```
+2. Set the parameters of this network in the file config.py
+2. Create the datasets and the GA individual's evaluator:
 ```sh
   make
 ```
-2. After, you have to configure it.
-  1. If you will use more than one machine to run the GA:
-    1. Copy this folder (after run 'make') to each node that you will use.
-    2. In each node, execute: './dgfann_node.py' or 'python dgfann_node.py'
-    3. Open the file 'config.py' in master node, and set a array with the IP nodes.  Ex.:  nodes = [ 'IP_NODE-02', 'IP_NODE-03', ... ]
-    4. Inside RNAGenetico.py, certify that 'distribuido=True' is setted in line 32
-  2. If you will use only this machine to run GA:
-    1. Inside RNAGenetico.py, certify that the option is 'distribuido=False' instead of 'distribuido=True'
-  3. Now, you can run GA in master node with the command:
+2. In RNAGenetico.py, make shure you have 'distribuido=False' 
+3. Run GA with the command:
 ```sh
   ./RNAGenetico.py
 ```
@@ -88,6 +88,9 @@ To start the process, you have
     # the plots will be placed in 'results_plots'
     # the neural outputs will be placed in 'results_ann'
 ```
+
+For running the genetic algorithm in a cluster:
+
 
 ## How to run your NNs and see the results
 
