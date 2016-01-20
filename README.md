@@ -48,7 +48,7 @@ All T<sub>v</sub> and T<sub>c</sub> datasets follow the format:
 ...
 ```
 
-Where all T<sub>v</sub> datasets have <network-input size> equal to 360 and <network-output size> equal 1, while all T<sub>c</sub> datasets have <network-input size> equal to 80 and <network-output size> equal 1.
+Where all T<sub>v</sub> datasets have \<network-input size\> equal to 360 and \<network-output size\> equal 1, while all T<sub>c</sub> datasets have \<network-input size\> equal to 80 and \<network-output size\> equal 1.
 
 ## How to use the dgfann to find configurations of neural networks (NN) and train these NNs
 
