@@ -231,7 +231,7 @@ Fig. 2 and Fig.3 shows the neural network capacity to generalize the new dataset
 |**Fig. 6. Velocity for 2014/08/02 plotted as [1]**|
 
 |![alt text](datasets/new_datasets/plots/Velocity_20140802-2.png)|
--:------------:
+:-------------:
 |**Fig. 7. Velocity for 2014/08/02 (alternative visualization)**|
 
 |![alt text](datasets/new_datasets/plots/Steering_20140802-1.png)|
