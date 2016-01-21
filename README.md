@@ -175,7 +175,7 @@ cd dgfann_lcad/dgfann_velocity
 
 ## Additional data and experiments
 
-The datasets used in [1] were collected at 2014/03/20 (velocity data) and 2014/03/24 (AOC data). Both, the velocity and AOC datasets, were shuffled, and split in training, validation, and test sets. Fig. VTRAIN, Fig. VVALI, and Fig. VTEST show the training, validation, and test datasets for the velocity network, and Fig. AOCTR, Fig. AOCVA, and Fig. AOCTE show the training, validation, and test datasets for the AOC data. Note that although the datasets look similar, they represent independent samples extracted from the same datasets. The equality in the distribution of data over all datasets is explained by the fact that the data are first shuffled, and only then split.
+The datasets used in [1] were collected at 2014/03/20 (velocity data) and 2014/03/24 (AOC data). Both, the velocity and AOC datasets, were shuffled, and split in training, validation, and test sets. Fig. VTRAIN, Fig. VVALI, and Fig. VTEST show the training, validation, and test datasets for the velocity network, and Fig. AOCTR, Fig. AOCVA, and Fig. AOCTE show the training, validation, and test datasets for the AOC data. Although the datasets look quite similar, they represent independent samples extracted from the same datasets. The equality in the distribution of data over all datasets is explained by the fact that the data were first shuffled, and only then split.
 
 ![alt text](datasets/plots/Velocity_train.png)
 **Fig. VTRAIN. Training dataset for the velocity network, captured in 2014/03/20**
