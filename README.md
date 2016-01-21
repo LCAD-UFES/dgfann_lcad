@@ -60,38 +60,42 @@ All T<sub>v</sub> and T<sub>c</sub> datasets follow the format:
 
 Where all T<sub>v</sub> datasets have \<network-input size\> equal to 360 and \<network-output size\> equal 1, while all T<sub>c</sub> datasets have \<network-input size\> equal to 80 and \<network-output size\> equal 1.
 
-The previous links for the datasets refer to the pre-processed (shuffled and without repeated patterns) data used to train, validate, and test the neural networks in [1]. The full velocity and AOC datasets in different formats can be accessed in:
+The previous links for the datasets refer to the pre-processed data (after shuffling and duplicates removal) as used in [1] to train, validate, and test the neural networks. The full velocity and AOC datasets in its raw format, the same dataset after each step of preprocessing, and the subsets obtained after the division in training, validation, and test datasets can be accessed in:
 
 Velocity Datasets | Content
 :------- | :-------
-Full Dataset - Original | The complete dataset in its raw format (without neither shuffle nor duplicates removal)
-Full Dataset - Step 1 | The complete dataset after duplicates removal
-Full Dataset - Step 2 | The complete dataset after shuffling
-Train Dataset - As in [1] | The subset from the complete dataset used to train the neural network as used for the experiments in [1]
-Train Dataset - Ordenado | The training dataset in its original order
-Train Dataset - Index | An index file that relates the shuffled samples from the training dataset to their position in the ordered training dataset. If the shuffled dataset is reordered according to the positions in this file, the result would be the original ordered dataset.
-Validation Dataset - As in [1] | The subset from the complete dataset used to validate the neural network as used for the experiments in [1]
-Validation Dataset - Ordenado | The validation dataset in its original order
-Validation Dataset - Index | An index file that relates the shuffled samples from the validation dataset to their position in the ordered validation dataset. If the shuffled dataset is reordered according to the positions in this file, the result would be the original ordered dataset.
-Test Dataset - As in [1] | The subset from the complete dataset used to test the neural network as used for the experiments in [1]
-Test Dataset - Ordenado | The test dataset in its original order
-Test Dataset - Index | An index file that relates the shuffled samples from the test dataset to their position in the ordered test dataset. If the shuffled dataset is reordered according to the positions in this file, the result would be the original ordered dataset.
+[Tv<sup>full</sup> Raw](datasets/velocity/Tv_full.fann) | The complete dataset in its raw format (without neither shuffle nor duplicates removal)
+[Tv<sup>full</sup> without duplicates](datasets/velocity/Tv_full-no_duplicates.fann) | The complete dataset after duplicates removal
+[Tv<sup>full</sup> shuffled](datasets/velocity/Tv_full-shuffled.fann) | The complete dataset after shuffling
+[Tv<sup>full</sup> shuffled Index](datasets/velocity/Tv_full-index.csv) | The positions of the samples in Tv<sup>full</sup> shuffled in the raw dataset Tv<sup>full</sup> Raw. If the shuffled dataset is reordered according to the positions in this file, the result would be the original raw dataset.
+[Tv<sup>tr</sup> samples](datasets/velocity/train.fann) | The subset from the complete dataset used to train the neural network as used for the experiments in [1]
+[Tv<sup>tr</sup> sorted](datasets/velocity/train-sorted.fann) | The training dataset in its original order
+[Tv<sup>tr</sup>](datasets/velocity/train-index.csv) | An index file that relates the shuffled samples from the training dataset to their position in the ordered training dataset. If the shuffled dataset is reordered according to the positions in this file, the result would be the original ordered dataset.
+[Tv<sup>va</sup>](datasets/velocity/validation.fann) | The subset from the complete dataset used to validate the neural network as used for the experiments in [1]
+[Tv<sup>va</sup>](datasets/velocity/validation-sorted.fann) | The validation dataset in its original order
+[Tv<sup>va</sup>](datasets/velocity/validation-index.csv) | An index file that relates the shuffled samples from the validation dataset to their position in the ordered validation dataset. If the shuffled dataset is reordered according to the positions in this file, the result would be the original ordered dataset.
+[Tv<sup>te</sup>](datasets/velocity/tests.fann) | The subset from the complete dataset used to test the neural network as used for the experiments in [1]
+[Tv<sup>te</sup> sorted](datasets/velocity/tests-sorted.fann) | The test dataset in its original order
+[Tv<sup>te</sup> index](datasets/velocity/tests-index.csv) | An index file that relates the shuffled samples from the test dataset to their position in the ordered test dataset. If the shuffled dataset is reordered according to the positions in this file, the result would be the original ordered dataset.
+
+
 
 
 AOC Datasets | Content
 :------- | :-------
-Full Dataset - Original | The complete dataset in its raw format (without neither shuffle nor duplicates removal)
-Full Dataset - Step 1 | The complete dataset after duplicates removal
-Full Dataset - Step 2 | The complete dataset after shuffling
-Train Dataset - As in [1] | The subset from the complete dataset used to train the neural network as used for the experiments in [1]
-Train Dataset - Ordenado | The training dataset in its original order
-Train Dataset - Index | An index file that relates the shuffled samples from the training dataset to their position in the ordered training dataset. If the shuffled dataset is reordered according to the positions in this file, the result would be the original ordered dataset.
-Validation Dataset - As in [1] | The subset from the complete dataset used to validate the neural network as used for the experiments in [1]
-Validation Dataset - Ordenado | The validation dataset in its original order
-Validation Dataset - Index | An index file that relates the shuffled samples from the validation dataset to their position in the ordered validation dataset. If the shuffled dataset is reordered according to the positions in this file, the result would be the original ordered dataset.
-Test Dataset - As in [1] | The subset from the complete dataset used to test the neural network as used for the experiments in [1]
-Test Dataset - Ordenado | The test dataset in its original order
-Test Dataset - Index | An index file that relates the shuffled samples from the test dataset to their position in the ordered test dataset. If the shuffled dataset is reordered according to the positions in this file, the result would be the original ordered dataset.
+[Tc<sup>full</sup> Raw](datasets/aoc/Tc_full.fann) | The complete dataset in its raw format (without neither shuffle nor duplicates removal)
+[Tc<sup>full</sup> without duplicates](datasets/aoc/Tc_full-no_duplicates.fann) | The complete dataset after duplicates removal
+[Tc<sup>full</sup> shuffled](datasets/aoc/Tc_full-shuffled.fann) | The complete dataset after shuffling
+[Tc<sup>full</sup> shuffled Index](datasets/aoc/Tc_full-index.csv) | The positions of the samples in Tc<sup>full</sup> shuffled in the raw dataset Tc<sup>full</sup> Raw. If the shuffled dataset is reordered according to the positions in this file, the result would be the original raw dataset.
+[Tc<sup>tr</sup> samples](datasets/aoc/train.fann) | The subset from the complete dataset used to train the neural network as used for the experiments in [1]
+[Tc<sup>tr</sup> sorted](datasets/aoc/train-sorted.fann) | The training dataset in its original order
+[Tc<sup>tr</sup>](datasets/aoc/train-index.csv) | An index file that relates the shuffled samples from the training dataset to their position in the ordered training dataset. If the shuffled dataset is reordered according to the positions in this file, the result would be the original ordered dataset.
+[Tc<sup>va</sup>](datasets/aoc/validation.fann) | The subset from the complete dataset used to validate the neural network as used for the experiments in [1]
+[Tc<sup>va</sup>](datasets/aoc/validation-sorted.fann) | The validation dataset in its original order
+[Tc<sup>va</sup>](datasets/aoc/validation-index.csv) | An index file that relates the shuffled samples from the validation dataset to their position in the ordered validation dataset. If the shuffled dataset is reordered according to the positions in this file, the result would be the original ordered dataset.
+[Tc<sup>te</sup>](datasets/aoc/tests.fann) | The subset from the complete dataset used to test the neural network as used for the experiments in [1]
+[Tc<sup>te</sup> sorted](datasets/aoc/tests-sorted.fann) | The test dataset in its original order
+[Tc<sup>te</sup> index](datasets/aoc/tests-index.csv) | An index file that relates the shuffled samples from the test dataset to their position in the ordered test dataset. If the shuffled dataset is reordered according to the positions in this file, the result would be the original ordered dataset.
 
 ## How to use the dgfann to find configurations of neural networks (NN) and train these NNs
 
