@@ -187,13 +187,13 @@ The datasets used in [1] were collected at 2014/03/20 (velocity data) and 2014/0
 **Fig. VTEST. Test dataset for the velocity network, captured in 2014/03/20**
 
 ![alt text](datasets/plots/AOC_train.png)
-**Fig. AOCTR. Training dataset for the velocity network, captured in 2014/03/24**
+**Fig. AOCTR. Training dataset for the AOC network, captured in 2014/03/24**
 
 ![alt text](datasets/plots/AOC_validation.png)
-**Fig. AOCVA. Training dataset for the velocity network, captured in 2014/03/24**
+**Fig. AOCVA. Training dataset for the AOC network, captured in 2014/03/24**
 
 ![alt text](datasets/plots/AOC_test.png)
-**Fig. AOCTE. Training dataset for the velocity network, captured in 2014/03/24**
+**Fig. AOCTE. Training dataset for the AOC network, captured in 2014/03/24**
 
 Two additional datasets were collected for both, velocity and AOC, to evaluate the generalization level of the neural networks, and to analyze their behavior in new challenging scenarios. These new datasets were not presented to any neural network during the execution of the genetic algorithm nor during the training phase of the neural networks. They were used to evaluate the performance and the behavior of the neural network in response to previously unseen stimuli. 
 The first dataset ([dataset1: steering](datasets/new_datasets/steering-20140509.tar.bz2), [dataset1: velocity](datasets/new_datasets/velocity-20140509.tar.bz2)) was captured in the same parking lot used in the experiments presented in [1], while the second dataset ([dataset2: steering](datasets/new_datasets/steering-20140802.tar.bz2), [dataset2: velocity](datasets/new_datasets/velocity-20140802.tar.bz2)) was captured in the beltway of the *Universidade Federal do Espírito Santo* (UFES). They were collected respectively at 2014/05/09 and 2014/08/02. In the beltway dataset, the robotic car performed significantly different maneuvers in relation to the parking lot datasets. These new maneuvers represent a constant challenge to the neural net estimation process, and in certain points took to the limit the network's extrapolation capacity. 
