@@ -40,12 +40,12 @@ In [1], we have used IARA (Fig. 1, above) to collect samples for building a trai
 
 These datasets are available in this repository and can be acessed in the following links:
 
-- [T<sub>v</sub><sup>te</sup>](dgfann_velocity/entradas/testes.train)
-- [T<sub>c</sub><sup>te</sup>](dgfann_aoc/entradas/testes.train)
-- [T<sub>v</sub><sup>tr</sup>](dgfann_velocity/entradas/treino.train)
-- [T<sub>c</sub><sup>tr</sup>](dgfann_aoc/entradas/treino.train)
-- [T<sub>v</sub><sup>va</sup>](dgfann_velocity/entradas/validacao.train)
-- [T<sub>c</sub><sup>va</sup>](dgfann_aoc/entradas/validacao.train)
+- [T<sub>v</sub><sup>te</sup>](dgfann_velocity/entradas/testes.fann)
+- [T<sub>c</sub><sup>te</sup>](dgfann_aoc/entradas/testes.fann)
+- [T<sub>v</sub><sup>tr</sup>](dgfann_velocity/entradas/treino.fann)
+- [T<sub>c</sub><sup>tr</sup>](dgfann_aoc/entradas/treino.fann)
+- [T<sub>v</sub><sup>va</sup>](dgfann_velocity/entradas/validacao.fann)
+- [T<sub>c</sub><sup>va</sup>](dgfann_aoc/entradas/validacao.fann)
 
 All T<sub>v</sub> and T<sub>c</sub> datasets follow the format:
 
