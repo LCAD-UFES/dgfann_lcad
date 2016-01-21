@@ -66,7 +66,7 @@ Velocity Datasets | Content
 :-------: | :-------:
 [Tv<sup>full</sup> Raw](datasets/velocity/Tv_full.fann) | The complete dataset in its raw format (without neither shuffle nor duplicates removal)
 [Tv<sup>full</sup> without duplicates](datasets/velocity/Tv_full-no_duplicates.fann) | The complete dataset after duplicates removal
-[Tv<sup>full</sup> Index](datasets/velocity/Tv_full-index.csv) | A CSV file with two fields, the first is the sample position in the Tv<sup>full</sup> without duplicates, and the second the respective position of the sample in the in the raw dataset Tv<sup>full</sup> Raw. 
+[Tv<sup>full</sup> Index](datasets/velocity/Tv_full-index.csv) | A CSV file with two fields, the first is the sample position in the dataset Tv<sup>full</sup> without duplicates, and the second the respective position of the sample in the in the raw dataset Tv<sup>full</sup> Raw. 
 [Tv<sup>full</sup> shuffled](datasets/velocity/Tv_full-shuffled.fann) | The complete dataset after shuffling
 [Tv<sup>tr</sup> samples](datasets/velocity/train.fann) | The subset from the complete dataset used to train the neural network as used for the experiments in [1]
 [Tv<sup>tr</sup> sorted](datasets/velocity/train-sorted.fann) | The training dataset in its original order
@@ -85,7 +85,7 @@ AOC Datasets | Content
 :-------: | :-------:
 [Tc<sup>full</sup> Raw](datasets/aoc/Tc_full.fann) | The complete dataset in its raw format (without neither shuffle nor duplicates removal)
 [Tc<sup>full</sup> without duplicates](datasets/aoc/Tc_full-no_duplicates.fann) | The complete dataset after duplicates removal
-[Tc<sup>full</sup> shuffled Index](datasets/aoc/Tc_full-index.csv) | A CSV file with two fields, the first is the sample position in the Tc<sup>full</sup> without duplicates, and the second the respective position of the sample in the in the raw dataset Tv<sup>full</sup> Raw. 
+[Tc<sup>full</sup> shuffled Index](datasets/aoc/Tc_full-index.csv) | A CSV file with two fields, the first is the sample position in the dataset Tc<sup>full</sup> without duplicates, and the second the respective position of the sample in the in the raw dataset Tv<sup>full</sup> Raw. 
 [Tc<sup>full</sup> shuffled](datasets/aoc/Tc_full-shuffled.fann) | The complete dataset after shuffling
 [Tc<sup>tr</sup> samples](datasets/aoc/train.fann) | The subset from the complete dataset used to train the neural network as used for the experiments in [1]
 [Tc<sup>tr</sup> sorted](datasets/aoc/train-sorted.fann) | The training dataset in its original order
