@@ -40,7 +40,7 @@ In [1], we have used IARA (Fig. 1, above) to collect samples for building a trai
 
 These datasets are available in this repository and can be acessed in the following links:
 
-- [T<sub>v</sub><sup>te</sup>](dgfann_velocity/entradas/testes.fann)
+- [T<sub>v</sub><sup>te</sup>](dgfann_velocity/entradas/testes.fann)  
 - [T<sub>c</sub><sup>te</sup>](dgfann_aoc/entradas/testes.fann)
 - [T<sub>v</sub><sup>tr</sup>](dgfann_velocity/entradas/treino.fann)
 - [T<sub>c</sub><sup>tr</sup>](dgfann_aoc/entradas/treino.fann)
@@ -59,6 +59,17 @@ All T<sub>v</sub> and T<sub>c</sub> datasets follow the format:
 ```
 
 Where all T<sub>v</sub> datasets have \<network-input size\> equal to 360 and \<network-output size\> equal 1, while all T<sub>c</sub> datasets have \<network-input size\> equal to 80 and \<network-output size\> equal 1.
+
+The previous links for the datasets refer to the pre-processed (shuffled and without repeated patterns) data used to train, validate, and test the neural networks in [1]. The raw datasets, without any pre-processing, can be accessed in:
+
+- [T<sub>v</sub><sup>te</sup>](dgfann_velocity/entradas/testes.fann)  
+- [T<sub>c</sub><sup>te</sup>](dgfann_aoc/entradas/testes.fann)
+- [T<sub>v</sub><sup>tr</sup>](dgfann_velocity/entradas/treino.fann)
+- [T<sub>c</sub><sup>tr</sup>](dgfann_aoc/entradas/treino.fann)
+- [T<sub>v</sub><sup>va</sup>](dgfann_velocity/entradas/validacao.fann)
+- [T<sub>c</sub><sup>va</sup>](dgfann_aoc/entradas/validacao.fann)
+
+The raw datasets after removing 
 
 ## How to use the dgfann to find configurations of neural networks (NN) and train these NNs
 
