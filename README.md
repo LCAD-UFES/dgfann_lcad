@@ -38,7 +38,7 @@ Note: An initial version of dgfann can be found at https://github.com/jeiks/gdfa
 
 In [1], we have used IARA (Fig. 1, above) to collect samples for building a training and a test datasets, T<sub>v</sub> and T<sub>c</sub> (see sections III.B and III.C of [1]). For that, we have set IARA to run autonomously in typical operating situations and logged data according with T<sub>v</sub> and T<sub>c</sub> descriptions, with k = 120 for T<sub>v</sub> and k = 40 for T<sub>c</sub>. The number of input-output pairs, n, collected for T<sub>v</sub> was equal to 5,366, and for T<sub>c</sub> was equal to 7,683. After data collection, each dataset was shuffled and split into two parts, (a) and (b), where (a) received 1/3 of the samples and (b) 2/3 of the samples. Part (a) was used as the test sets, T<sub>v</sub><sup>te</sup> and T<sub>c</sub><sup>te</sup>, while part (b) was divided into the training (2/3 of (b)), T<sub>v</sub><sup>tr</sup> and T<sub>c</sub><sup>tr</sup>, and validation (1/3 of (b)), T<sub>v</sub><sup>va</sup> and T<sub>c</sub><sup>va</sup>, sets. 
 
-These datasets are part of this repository:
+These datasets are available in this repository and can be acessed in the following links:
 
 - [T<sub>v</sub><sup>te</sup>](dgfann_velocity/entradas/testes.train)
 - [T<sub>c</sub><sup>te</sup>](dgfann_aoc/entradas/testes.train)
@@ -175,11 +175,28 @@ cd dgfann_lcad/dgfann_velocity
 
 ## Additional data and experiments
 
-The data used to [1] was collected at 2014/03/20 to the velocity network and at 2014/03/24 to the AOC network.
+The datasets used in [1] were collected at 2014/03/20 (velocity data) and 2014/03/24 (AOC data). Both, the velocity and AOC datasets, were shuffled, and split in training, validation, and test sets. Fig. VTRAIN, Fig. VVALI, and Fig. VTEST show the training, validation, and test datasets for the velocity network, and Fig. AOCTR, Fig. AOCVA, and Fig. AOCTE show the training, validation, and test datasets for the AOC data. Note that although the datasets look similar, they represent independent samples extracted from the same datasets. The equality in the distribution of data over all datasets is explained by the fact that the data are first shuffled, and only then split.
 
-Two additional datasets were collected to evaluate the generalization level of the neural networks, and to analyze their behavior in new challenging scenarios.
-The first dataset ([dataset1: steering](datasets/new_datasets/steering-20140509.tar.bz2), [dataset1: velocity](datasets/new_datasets/velocity-20140509.tar.bz2)) was captured in the same parking lot used in the experiments presented in [1], while the second dataset ([dataset2: steering](datasets/new_datasets/steering-20140802.tar.bz2), [dataset2: velocity](datasets/new_datasets/velocity-20140802.tar.bz2)) was captured in the beltway of the *Universidade Federal do Espírito Santo* (UFES). They were collected respectively at 2014/05/09 and 2014/08/02. In the beltway dataset, the robotic car performed significantly different maneuvers in relation to the parking lot datasets. These new maneuvers represent a constant challenge to the neural net estimation
-process, and in certain points took to the limit the network's extrapolation capacity. 
+![alt text](datasets/plots/Velocity_train.png)
+**Fig. VTRAIN. Training dataset for the velocity network, captured in 2014/03/20**
+
+![alt text](datasets/plots/Velocity_validation.png)
+**Fig. VVALI. Validation dataset for the velocity network, captured in 2014/03/20**
+
+![alt text](datasets/plots/Velocity_test.png)
+**Fig. VTEST. Test dataset for the velocity network, captured in 2014/03/20**
+
+![alt text](datasets/plots/AOC_train.png)
+**Fig. AOCTR. Training dataset for the velocity network, captured in 2014/03/24**
+
+![alt text](datasets/plots/AOC_validation.png)
+**Fig. AOCVA. Training dataset for the velocity network, captured in 2014/03/24**
+
+![alt text](datasets/plots/AOC_test.png)
+**Fig. AOCTE. Training dataset for the velocity network, captured in 2014/03/24**
+
+Two additional datasets were collected for both, velocity and AOC, to evaluate the generalization level of the neural networks, and to analyze their behavior in new challenging scenarios. These new datasets were not presented to any neural network during the execution of the genetic algorithm nor during the training phase of the neural networks. They were used to evaluate the performance and the behavior of the neural network in response to previously unseen stimuli. 
+The first dataset ([dataset1: steering](datasets/new_datasets/steering-20140509.tar.bz2), [dataset1: velocity](datasets/new_datasets/velocity-20140509.tar.bz2)) was captured in the same parking lot used in the experiments presented in [1], while the second dataset ([dataset2: steering](datasets/new_datasets/steering-20140802.tar.bz2), [dataset2: velocity](datasets/new_datasets/velocity-20140802.tar.bz2)) was captured in the beltway of the *Universidade Federal do Espírito Santo* (UFES). They were collected respectively at 2014/05/09 and 2014/08/02. In the beltway dataset, the robotic car performed significantly different maneuvers in relation to the parking lot datasets. These new maneuvers represent a constant challenge to the neural net estimation process, and in certain points took to the limit the network's extrapolation capacity. 
 
 Fig. 2 (another view in Fig. 3) and Fig. 4 (another view in Fig. 5) show the velocity and AOC data, respectively, for the parking lot dataset along with the estimations made by the best neural network found in [1].
 Fig. 6 (another view in Fig. 7) and Fig. 8 (another view in Fig. 9) show the same data for the beltway dataset.
