@@ -193,6 +193,8 @@ In the parking lot dataset, the neural net was able to successfully estimate the
 
 **Fig. 3. Velocity for 2014/05/09 (alternative visualization)**
 
+Fig. 2 and Fig.3 shows the neural network capacity to generalize the new dataset. With Mean Squared Error (MSE) of 4.1x10<sup>-3</sup>, this network has satisfactory results over the new parking lot dataset. Note that this dataset velocity is less than 3.5 m/s and the dataset used for [1] had values until 4.5 m/s.
+
 ![alt text](new_datasets/plots/Steering_20140509-1.png)
 
 **Fig. 4. AOC for 2014/05/09 plotted as [1]**
