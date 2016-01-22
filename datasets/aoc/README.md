@@ -4,7 +4,7 @@ Description | Samples file (composed only by the samples) | Respective file in g
 :------------:|:---------------------------------------------:|:-------:
 Tc<sup>full</sup> | [Tc<sup>full</sup>](Tc_full.fann) | dgfann\_aoc/entradas/Data/todos_dados.fann
 Tc<sup>full</sup> without replicates | [Tc<sup>full</sup> (without replicates)](Tc_full-no_duplicates.fann) | This is a temp file generated in 'dgfann\_aoc/separarEntradas.py'
-Tc<sup>full</sup> without replicates and shuffled | [Tc<sup>full</sup> shuffled](Tc_full-shuffled.fann)
+Tc<sup>full</sup> without replicates and shuffled | [Tc<sup>full</sup> shuffled](Tc_full-shuffled.fann) | -
 Tc<sup>full</sup> index    | [Tc<sup>full</sup> index](Tc_full-index.csv) | -
 Tc<sup>tr</sup> samples    | [Tc<sup>tr</sup> samples](train.fann) | dgfann\_aoc/entradas/treino.fann
 Tc<sup>tr</sup> sorted     | [Tc<sup>tr</sup> sorted](train-sorted.fann) | dgfann\_aoc/entradas/treino-ordenado.fann
