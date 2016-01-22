@@ -210,72 +210,72 @@ cd dgfann_lcad/dgfann_velocity
 
 ## Additional data and experiments
 
-The datasets used in [1] were collected at 2014/03/20 (velocity data) and 2014/03/24 (AOC data). Both, the velocity and AOC datasets, were shuffled, and split in training, validation, and test sets. Fig. VTRAIN, Fig. VVALI, and Fig. VTEST show the training, validation, and test datasets for the velocity network, and Fig. AOCTR, Fig. AOCVA, and Fig. AOCTE show the training, validation, and test datasets for the AOC data. Although the datasets look quite similar, they represent independent samples extracted from the same datasets. The equality in the distribution of data over all datasets is explained by the fact that the data were first shuffled, and only then split. 
+The datasets used in [1] were collected at 2014/03/20 (velocity data) and 2014/03/24 (AOC data). Both, the velocity and AOC datasets, were shuffled, and split in training, validation, and test sets. Fig. 2, Fig. 3, and Fig. 4 show the training, validation, and test datasets for the velocity network, and Fig. 5, Fig. 6, and Fig. 8 show the training, validation, and test datasets for the AOC data. Although the datasets look quite similar, they represent independent samples extracted from the same datasets. The equality in the distribution of data over all datasets is explained by the fact that the data were first shuffled, and only then split. 
 
-|![alt text](datasets/plots/Velocity_train.png)|
+|[![alt text](datasets/plots/Velocity_train-800x600.png)](datasets/plots/Velocity_train.png)|
 :-------------:
-|**Fig. VTRAIN. Training dataset for the velocity network, captured in 2014/03/20**|
+|**Fig. 2. Training dataset for the velocity network, captured in 2014/03/20**|
 
-|![alt text](datasets/plots/Velocity_validation.png)|
+|[![alt text](datasets/plots/Velocity_validation-800x600.png)](datasets/plots/Velocity_validation.png)|
 :-------------:
-|**Fig. VVALI. Validation dataset for the velocity network, captured in 2014/03/20**|
+|**Fig. 3. Validation dataset for the velocity network, captured in 2014/03/20**|
 
-|![alt text](datasets/plots/Velocity_test.png)|
+|[![alt text](datasets/plots/Velocity_test-800x600.png)](datasets/plots/Velocity_test.png)|
 :-------------:
-|**Fig. VTEST. Test dataset for the velocity network, captured in 2014/03/20**|
+|**Fig. 4. Test dataset for the velocity network, captured in 2014/03/20**|
 
-|![alt text](datasets/plots/AOC_train.png)|
+|[![alt text](datasets/plots/AOC_train-800x600.png)](datasets/plots/AOC_train.png)|
 :-------------:
-|**Fig. AOCTR. Training dataset for the AOC network, captured in 2014/03/24**|
+|**Fig. 5. Training dataset for the AOC network, captured in 2014/03/24**|
 
-|![alt text](datasets/plots/AOC_validation.png)|
+|[![alt text](datasets/plots/AOC_validation-800x600.png)](datasets/plots/AOC_validation.png)|
 :-------------:
-|**Fig. AOCVA. Validation dataset for the AOC network, captured in 2014/03/24**|
+|**Fig. 6. Validation dataset for the AOC network, captured in 2014/03/24**|
 
-|![alt text](datasets/plots/AOC_test.png)|
+|[![alt text](datasets/plots/AOC_test-800x600.png)](datasets/plots/AOC_test.png)|
 :-------------:
-|**Fig. AOCTE. Test dataset for the AOC network, captured in 2014/03/24**|
+|**Fig. 8. Test dataset for the AOC network, captured in 2014/03/24**|
 
 Two additional datasets were collected for both, velocity and AOC, to evaluate the generalization level of the neural networks, and to analyze their behavior in new challenging scenarios. These new datasets were not presented to any neural network during the execution of the genetic algorithm nor during the training phase of the neural networks. They were used to evaluate the performance and the behavior of the neural network in response to previously unseen stimuli. 
 The first dataset ([dataset1: steering](datasets/new_datasets/steering-20140509.tar.bz2), [dataset1: velocity](datasets/new_datasets/velocity-20140509.tar.bz2)) was captured in the same parking lot used in the experiments presented in [1], while the second dataset ([dataset2: steering](datasets/new_datasets/steering-20140802.tar.bz2), [dataset2: velocity](datasets/new_datasets/velocity-20140802.tar.bz2)) was captured in the beltway of the *Universidade Federal do Espírito Santo* (UFES). They were collected, respectively, at 2014/05/09 and 2014/08/02. The parking lot dataset size is similar to the datasets used in [1], with more smooth movements and less variability however. In the beltway dataset, the robotic car performed significantly different maneuvers in comparison with the parking lot datasets. These new maneuvers represent a constant challenge to the neural net estimation process, and in certain points took to the limit the network's extrapolation capacity. The beltway dataset is algo challeging due to its significantly higher size in relation to the training and validation datasets.
 
-Fig. 2 (another view in Fig. 3) and Fig. 4 (another view in Fig. 5) show the velocity and AOC data, respectively, for the parking lot dataset along with the estimations made by the best neural network found in [1].
-Fig. 6 (another view in Fig. 7) and Fig. 8 (another view in Fig. 9) show the same data for the beltway dataset.
+Fig. 9 (another view in Fig. 10) and Fig. 11 (another view in Fig. 12) show the velocity and AOC data, respectively, for the parking lot dataset along with the estimations made by the best neural network found in [1].
+Fig. 13 (another view in Fig. 14) and Fig. 15 (another view in Fig. 16) show the same data for the beltway dataset.
 In the parking lot dataset, the neural net was able to successfully estimate the car’s velocity and AOC in the whole trajectory of the experiment. In the beltway dataset, on the other hand, the network produced satisfactory results for velocities as high as twice the ones seen in the training phase, but was unable to estimate values higher than that. Although the results demonstrated that the neural network was able to successfully generalize its knowledge to challenging unseen scenarios, the upper bound in the velocity estimations indicates that the neural net achieved its maximum extrapolation level. We believe that training the network with additional high velocity data would attenuate the difference between the neural net predictions and the values measured by the car’s sensors. However, more experiments are necessary to validate this hypothesis.
 
-|![alt text](datasets/new_datasets/plots/Velocity_20140509-1.png)|
+|[![alt text](datasets/new_datasets/plots/Velocity_20140509-1-800x600.png)](datasets/new_datasets/plots/Velocity_20140509-1.png)|
 :-------------:
-|**Fig. 2. Velocity for 2014/05/09 plotted as [1]**|
+|**Fig. 9. Velocity for 2014/05/09 plotted as [1]**|
 
-|![alt text](datasets/new_datasets/plots/Velocity_20140509-2.png)|
+|[![alt text](datasets/new_datasets/plots/Velocity_20140509-2-800x600.png)](datasets/new_datasets/plots/Velocity_20140509-2.png)|
 :-------------:
-|**Fig. 3. Velocity for 2014/05/09 (alternative visualization)**|
+|**Fig. 10. Velocity for 2014/05/09 (alternative visualization)**|
 
-Fig. 2 and Fig.3 shows the neural network capacity to generalize the new dataset. With Mean Squared Error (MSE) of 4.1x10<sup>-3</sup>, this network has satisfactory results over the new parking lot dataset. Note that this dataset velocity is less than 3.5 m/s and the dataset used for [1] had values until 4.5 m/s.
+Fig. 9 and Fig.10 shows the neural network capacity to generalize the new dataset. With Mean Squared Error (MSE) of 4.1x10<sup>-3</sup>, this network has satisfactory results over the new parking lot dataset. Note that this dataset velocity is less than 3.5 m/s and the dataset used for [1] had values until 4.5 m/s.
 
-|![alt text](datasets/new_datasets/plots/Steering_20140509-1.png)|
+|[![alt text](datasets/new_datasets/plots/Steering_20140509-1-800x600.png)](datasets/new_datasets/plots/Steering_20140509-1.png)|
 :-------------:
-|**Fig. 4. AOC for 2014/05/09 plotted as [1]**|
+|**Fig. 11. AOC for 2014/05/09 plotted as [1]**|
 
-|![alt text](datasets/new_datasets/plots/Steering_20140509-2.png)|
+|[![alt text](datasets/new_datasets/plots/Steering_20140509-2-800x600.png)](datasets/new_datasets/plots/Steering_20140509-2.png)|
 :-------------:
-|**Fig. 5. AOC for 2014/05/09 (alternative visualization)**|
+|**Fig. 12. AOC for 2014/05/09 (alternative visualization)**|
 
-|![alt text](datasets/new_datasets/plots/Velocity_20140802-1.png)|
+|[![alt text](datasets/new_datasets/plots/Velocity_20140802-1-800x600.png)](datasets/new_datasets/plots/Velocity_20140802-1.png)|
 :-------------:
-|**Fig. 6. Velocity for 2014/08/02 plotted as [1]**|
+|**Fig. 13. Velocity for 2014/08/02 plotted as [1]**|
 
-|![alt text](datasets/new_datasets/plots/Velocity_20140802-2.png)|
+|[![alt text](datasets/new_datasets/plots/Velocity_20140802-2-800x600.png)](datasets/new_datasets/plots/Velocity_20140802-2.png)|
 :-------------:
-|**Fig. 7. Velocity for 2014/08/02 (alternative visualization)**|
+|**Fig. 14. Velocity for 2014/08/02 (alternative visualization)**|
 
-|![alt text](datasets/new_datasets/plots/Steering_20140802-1.png)|
+|[![alt text](datasets/new_datasets/plots/Steering_20140802-1-800x600.png)](datasets/new_datasets/plots/Steering_20140802-1.png)|
 :-------------:
-|**Fig. 8. AOC for 2014/08/02 plotted as [1]**|
+|**Fig. 15. AOC for 2014/08/02 plotted as [1]**|
 
-|![alt text](datasets/new_datasets/plots/Steering_20140802-2.png)|
+|[![alt text](datasets/new_datasets/plots/Steering_20140802-2-800x600.png)](datasets/new_datasets/plots/Steering_20140802-2.png)|
 :-------------:
-|**Fig. 9. AOC for 2014/08/02 (alternative visualization)**|
+|**Fig. 16. AOC for 2014/08/02 (alternative visualization)**|
 
 
 The results of the new experiments can be accessed in the following links:
