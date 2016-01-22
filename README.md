@@ -63,7 +63,7 @@ Where all T<sub>v</sub> datasets have \<network-input size\> equal to 360 and \<
 The previous links for the datasets refer to the pre-processed data (after shuffling and duplicates removal) as used in [1] to train, validate, and test the neural networks. The full velocity and AOC datasets in its raw format, the same dataset after each step of preprocessing, and the subsets obtained after the division in training, validation, and test datasets can be accessed in:
 
 Velocity Datasets | Content
-:-------: | :-------:
+:---------------: | :------------------------:
 [Tv<sup>full</sup> Raw](datasets/velocity/Tv_full.fann) | The complete dataset in its raw format (without neither shuffle nor duplicates removal)
 [Tv<sup>full</sup> without duplicates](datasets/velocity/Tv_full-no_duplicates.fann) | The complete dataset after duplicates removal
 [Tv<sup>full</sup> Index](datasets/velocity/Tv_full-index.csv) | A CSV file with two fields, the first is the sample position in the dataset Tv<sup>full</sup> without duplicates, and the second the respective position of the sample in the in the raw dataset Tv<sup>full</sup> Raw. 
