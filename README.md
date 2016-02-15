@@ -2,7 +2,10 @@
 
 dgfann is a Distributed Genetic Algorithm framework for optimizing the configuration (number of layers, neuron types, number of neurons, etc.) of the neural networks (NN). dgfann finds  the best configurations of NNs and train them using fann (https://github.com/libfann/fann).
 
-We present dgfann_lcad installation and use here for Ubuntu 12.04.
+We present here dgfann_lcad installation and use for Ubuntu 12.04.
+
+dgfann_lcad was used in the paper Alberto F. De Souza, Jacson Rodrigues Correia da Silva, Filipe Mutz, Claudine Badue, Thiago Oliveira-Santos, "Simulating Robotic Cars Using Multi-Layer Neural Networks", submitted to the 2016 International Joint Conference on Neural Networks - IJCNN'2016. You can find the datasets used in the paper as well as extra results below.
+
 
 ## Simulating Robotic Cars Using Multi-Layer Neural Networks
 
