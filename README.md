@@ -294,7 +294,7 @@ We made an additional experiment to attenuate the difference between the neural 
 
 |[![alt text](datasets/new_datasets/plots/new_exp/Velocity_train_paper_dataset-800x600.png)](datasets/new_datasets/plots/new_exp/Velocity_train_paper_dataset.png)|
 :-------------:
-|**Fig. 17. Train dataset for new experiment **|
+|**Fig. 17. Train dataset for new experiment**|
 
 The dgfann found almost the same network configuration, the difference was the number of hidden neurons:
 - Fist hidden layer: from 50 to 300;
@@ -306,27 +306,27 @@ And the Fig. 22 (another view in Fig. 23) show the test for the beltway dataset 
 
 |[![alt text](datasets/new_datasets/plots/new_exp/Velocity_tests_paper_dataset-1-800x600.png)](datasets/new_datasets/plots/new_exp/Velocity_tests_paper_dataset-1.png)|
 :-------------:
-|**Fig. 18. Paper's test dataset for new experiment **|
+|**Fig. 18. Paper's test dataset for new experiment**|
 
 |[![alt text](datasets/new_datasets/plots/new_exp/Velocity_tests_paper_dataset-2-800x600.png)](datasets/new_datasets/plots/new_exp/Velocity_tests_paper_dataset-2.png)|
 :-------------:
-|**Fig. 19. Paper's test dataset for new experiment (alternative visualization) **|
+|**Fig. 19. Paper's test dataset for new experiment (alternative visualization)**|
 
 |[![alt text](datasets/new_datasets/plots/new_exp/Velocity_tests_20140509-1-800x600.png)](datasets/new_datasets/plots/new_exp/Velocity_tests_20140509-1.png)|
 :-------------:
-|**Fig. 20. Second Parking lot dataset (2014/05/09) for new experiment **|
+|**Fig. 20. Second Parking lot dataset (2014/05/09) for new experiment**|
 
 |[![alt text](datasets/new_datasets/plots/new_exp/Velocity_tests_20140509-2-800x600.png)](datasets/new_datasets/plots/new_exp/Velocity_tests_20140509-2.png)|
 :-------------:
-|**Fig. 21. Second Parking lot dataset (2014/05/09) for new experiment (alternative visualization) **|
+|**Fig. 21. Second Parking lot dataset (2014/05/09) for new experiment (alternative visualization)**|
 
 |[![alt text](datasets/new_datasets/plots/new_exp/Velocity_tests_20140802-1-800x600.png)](datasets/new_datasets/plots/new_exp/Velocity_tests_20140802-1.png)|
 :-------------:
-|**Fig. 22. Beltway dataset for new experiment **|
+|**Fig. 22. Beltway dataset for new experiment**|
 
 |[![alt text](datasets/new_datasets/plots/new_exp/Velocity_tests_20140802-2-800x600.png)](datasets/new_datasets/plots/new_exp/Velocity_tests_20140802-2.png)|
 :-------------:
-|**Fig. 23. Beltway dataset for new experiment (alternative visualization) **|
+|**Fig. 23. Beltway dataset for new experiment (alternative visualization)**|
 
 ## References
 
