@@ -305,7 +305,7 @@ As we have seen, the first neural network could not generalize the values becaus
 This new neural network was able to successfully estimate the car velocity to all tests datasets, including the beltway dataset, resolving the problem mentioned in previous section. The results with the tests datasets applied to this new neural network are:
 - The Fig. 18 (another view in Fig. 19) shows the test dataset used in [1]. These results can be compared with Fig. 4 and Fig. 5.
 - The Fig. 20 (another view in Fig. 21) shows the test for the second parking lot dataset (2014/05/09). These results can be compared with Fig. 9 and Fig. 10.
-- And the Fig. 22 (another view in Fig. 23) shows the test for the **beltway** dataset (2014/08/02). These results can be compared with Fig. 13 and Fig. 14.
+- And the Fig. 22 (another view in Fig. 23) shows the test for the **beltway** dataset (2014/08/02). Please compare these results with Fig. 13 and Fig. 14, because these graphics show that the problem cited in previous section was solved.
 
 |[![alt text](datasets/new_datasets/plots/new_exp/Velocity_tests_paper_dataset-1-800x600.png)](datasets/new_datasets/plots/new_exp/Velocity_tests_paper_dataset-1.png)|
 :-------------:
