@@ -290,7 +290,7 @@ The results of the new experiments can be accessed in the following links:
 
 ## New experiment for Velocity
 
-In the previous section, two new datasets have been presented to the neural network. But in beltway dataset, the neural network was unable to estimate the higher values (Fig. 13 and Fig. 14) without bias. Based on that, it was made an additional experiment to attenuate the difference between the neural net predictions and the values measured by the car's velocity sensors. In this experiment, the 2510 first samples from 2014/08/02 were concatenated in training dataset used in [1] \(original at Fig. 2 and the new at Fig. 17\) and the dgfann was executed again to find the neural network configuration.
+In the previous section, two new datasets have been presented to the neural network. But in beltway dataset, the neural network was unable to estimate the higher values (Fig. 13 and Fig. 14) without bias. Based on that, it was made an additional experiment to attenuate the difference between the neural net predictions and the values measured by the car's velocity sensors. In this experiment, the 2510 first samples from 2014/08/02 (they can be seen at Fig. 14) were concatenated in training dataset used in [1] \(original dataset at Fig. 2 and this new dataset at Fig. 17\) and the dgfann was executed again to find the neural network configuration.
 
 |[![alt text](datasets/new_datasets/plots/new_exp/Velocity_train_paper_dataset-800x600.png)](datasets/new_datasets/plots/new_exp/Velocity_train_paper_dataset.png)|
 :-------------:
