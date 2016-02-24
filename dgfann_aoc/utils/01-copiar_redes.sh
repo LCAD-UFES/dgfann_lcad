@@ -2,7 +2,7 @@
 
 ARQ_RESULTADOS='Resultado_Alg-Genetico.txt'
 ARQ_TEMP='.tempResults'
-ARQ_VALIDACAO='entradas/validacao.train'
+ARQ_VALIDACAO=$(python -c 'from config import nomeArqValidacao;print nomeArqValidacao')
 TESTE_RNA='utils/teste_RNA'
 
 [ ! -f $ARQ_RESULTADOS ] && {
