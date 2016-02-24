@@ -290,19 +290,22 @@ The results of the new experiments can be accessed in the following links:
 
 ## New experiment for Velocity
 
-We made an additional experiment to attenuate the difference between the neural net predictions and the values measured by the car's velocity sensors. In this experiment, we added the 2510 first samples from 2014/08/02 to training dataset (showed in Fig. 17) used in [1] and run the dgfann again to find the neural network configuration.
+In the previous section, two new datasets have been presented to the neural network. But in beltway dataset, the neural network was unable to estimate the higher values (Fig. 13 and Fig. 14) without bias. Based on that, it was made an additional experiment to attenuate the difference between the neural net predictions and the values measured by the car's velocity sensors. In this experiment, the 2510 first samples from 2014/08/02 were concatenated in training dataset used in [1] \(original at Fig. 2 and the new at Fig. 17\) and the dgfann was executed again to find the neural network configuration.
 
 |[![alt text](datasets/new_datasets/plots/new_exp/Velocity_train_paper_dataset-800x600.png)](datasets/new_datasets/plots/new_exp/Velocity_train_paper_dataset.png)|
 :-------------:
 |**Fig. 17. Train dataset for new experiment**|
 
-The [neural network](dgfann_lcad/datasets/new_datasets/new-exp-network.tar.bz2) found with dgfann now showed almost the same configuration as the neural network that was found at [1], the difference was the number of hidden neurons:
-- Fist hidden layer: from 50 to 300;
+The [neural network](dgfann_lcad/datasets/new_datasets/new-exp-network.tar.bz2) found at this time showed almost the same configuration as the neural network that was found at [1], the difference was the number of hidden neurons:
+- First hidden layer: from 50 to 300;
 - Second hidden layer: from 25 to 150;
 
-The Fig. 18 (another view in Fig. 19) show the test dataset used in [1] for this new velocity network.
-The Fig. 20 (another view in Fig. 21) show the test for the second parking lot dataset (2014/05/09).
-And the Fig. 22 (another view in Fig. 23) show the test for the beltway dataset (2014/08/02).
+As we have seen, the first neural network could not generalize the values because it didn't have the sufficient number of hidden neurons. This experiment also showed that the new training dataset (composed with the higher values) was sufficient to the dgfann finds the best neural network configuration. 
+
+This new neural network was able to successfully estimate the car velocity to all tests dataset, including the beltway dataset, resolving the problem mentioned in previous section. The results with the test datasets applied to this new neural network are:
+- The Fig. 18 (another view in Fig. 19) shows the test dataset used in [1] for this new velocity network. These results can be compared with Fig. 4 and Fig. 5.
+- The Fig. 20 (another view in Fig. 21) shows the test for the second parking lot dataset (2014/05/09). These results can be compared with Fig. 9 and Fig. 10.
+- And the Fig. 22 (another view in Fig. 23) shows the test for the **beltway** dataset (2014/08/02). These results can be compared with Fig. 13 and Fig. 14.
 
 |[![alt text](datasets/new_datasets/plots/new_exp/Velocity_tests_paper_dataset-1-800x600.png)](datasets/new_datasets/plots/new_exp/Velocity_tests_paper_dataset-1.png)|
 :-------------:
