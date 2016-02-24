@@ -302,7 +302,7 @@ The [neural network](datasets/new_datasets/new-exp-network.tar.bz2) found at thi
 
 As we have seen, the first neural network could not generalize the values because it didn't have the sufficient number of hidden neurons. This experiment also showed that the new training dataset (composed with the higher values) was sufficient to the dgfann finds the best neural network configuration. 
 
-This new neural network was able to successfully estimate the car velocity to all tests dataset, including the beltway dataset, resolving the problem mentioned in previous section. The results with the test datasets applied to this new neural network are:
+This new neural network was able to successfully estimate the car velocity to all tests datasets, including the beltway dataset, resolving the problem mentioned in previous section. The results with the tests datasets applied to this new neural network are:
 - The Fig. 18 (another view in Fig. 19) shows the test dataset used in [1]. These results can be compared with Fig. 4 and Fig. 5.
 - The Fig. 20 (another view in Fig. 21) shows the test for the second parking lot dataset (2014/05/09). These results can be compared with Fig. 9 and Fig. 10.
 - And the Fig. 22 (another view in Fig. 23) shows the test for the **beltway** dataset (2014/08/02). These results can be compared with Fig. 13 and Fig. 14.
