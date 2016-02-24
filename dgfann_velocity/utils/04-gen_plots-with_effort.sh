@@ -17,10 +17,6 @@ PATTERNS_FILE=$(python -c "from config import $PATTERNS_FILENAME;print $PATTERNS
 DIR_OUTPUTS="results_${PATTERNS_FILENAME#nomeArq}-ann"
 DIR_PLOTS="results_${PATTERNS_FILENAME#nomeArq}-plots"
 
-PATTERNS_FILE='entradas_aux/velocity-20140802-1.fann'
-DIR_OUTPUTS='results_ann_20140802-1'
-DIR_PLOTS='results_plot_20140802-1'
-
 echo "Using '$PATTERNS_FILE'. The results will be saved in folder '$DIR_OUTPUTS' and '$DIR_PLOTS'..."
 
 mkdir -p $DIR_OUTPUTS $DIR_PLOTS
