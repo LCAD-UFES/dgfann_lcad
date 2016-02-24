@@ -296,7 +296,7 @@ In the previous section, two new datasets have been presented to the neural netw
 :-------------:
 |**Fig. 17. Train dataset for new experiment**|
 
-The [neural network](dgfann_lcad/datasets/new_datasets/new-exp-network.tar.bz2) found at this time showed almost the same configuration as the [neural network](dgfann_lcad/dgfann_velocity/00-LAST_RAN_DATA/Best_Neural_Networks_found/2_10_0_50_0_0.1_0.8_0.4_300.net) that was found at [1], the difference was the number of hidden neurons:
+The [neural network](datasets/new_datasets/new-exp-network.tar.bz2) found at this time showed almost the same configuration as the [neural network](dgfann_velocity/00-LAST_RAN_DATA/Best_Neural_Networks_found/2_10_0_50_0_0.1_0.8_0.4_300.net) that was found at [1], the difference was the number of hidden neurons:
 - First hidden layer: from 50 to 300;
 - Second hidden layer: from 25 to 150;
 
