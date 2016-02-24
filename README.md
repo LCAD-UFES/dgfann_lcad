@@ -244,7 +244,7 @@ The first dataset ([dataset1: steering](datasets/new_datasets/steering-20140509.
 
 Fig. 9 (another view in Fig. 10) and Fig. 11 (another view in Fig. 12) show the velocity and AOC data, respectively, for the parking lot dataset along with the estimations made by the best neural network found in [1].
 Fig. 13 (another view in Fig. 14) and Fig. 15 (another view in Fig. 16) show the same data for the beltway dataset.
-In the parking lot dataset, the neural net was able to successfully estimate the car’s velocity and AOC in the whole trajectory of the experiment. In the beltway dataset, on the other hand, the network produced satisfactory results for velocities as high as twice the ones seen in the training phase, but was unable to estimate values higher than that. Although the results demonstrated that the neural network was able to successfully generalize its knowledge to challenging unseen scenarios, the upper bound in the velocity estimations indicates that the neural net achieved its maximum extrapolation level. Search by a neural network with additional high velocity data can attenuate the difference between the neural net predictions and the values measured by the car’s sensors. This experiment is showed in next session.
+In the parking lot dataset, the neural net was able to successfully estimate the car’s velocity and AOC in the whole trajectory of the experiment. In the beltway dataset, on the other hand, the network produced satisfactory results for velocities as high as twice the ones seen in the training phase, but was unable to estimate values higher than that. Although the results demonstrated that the neural network was able to successfully generalize its knowledge to challenging unseen scenarios, the upper bound in the velocity estimations indicates that the neural net achieved its maximum extrapolation level. A neural network trained with additional high velocity data can attenuate the difference between the neural net predictions and the values measured by the car’s sensors. A new experiment with dgfann and a new train dataset is showed in next session.
 
 |[![alt text](datasets/new_datasets/plots/Velocity_20140509-1-800x600.png)](datasets/new_datasets/plots/Velocity_20140509-1.png)|
 :-------------:
@@ -290,13 +290,13 @@ The results of the new experiments can be accessed in the following links:
 
 ## New experiment for Velocity
 
-We made an additional experiment to attenuate the difference between the neural net predictions and the values measured by the car's velocity sensors. In these experiments, we added the 2510 first samples from 2014/08/02 to training dataset (showed in Fig. 17) and run the dgfann again.
+We made an additional experiment to attenuate the difference between the neural net predictions and the values measured by the car's velocity sensors. In this experiment, we added the 2510 first samples from 2014/08/02 to training dataset used in [1] (new training dataset showed in Fig. 17) and run the dgfann again to find the neural network configuration.
 
 |[![alt text](datasets/new_datasets/plots/new_exp/Velocity_train_paper_dataset-800x600.png)](datasets/new_datasets/plots/new_exp/Velocity_train_paper_dataset.png)|
 :-------------:
 |**Fig. 17. Train dataset for new experiment**|
 
-The dgfann found almost the same network configuration, the difference was the number of hidden neurons:
+The [neural network](dgfann_lcad/datasets/new_datasets/new-exp-network.tar.bz2) found with dgfann now showed almost the same configuration as the neural network that was found at [1], the difference was the number of hidden neurons:
 - Fist hidden layer: from 50 to 300;
 - Second hidden layer: from 25 to 150;
 
