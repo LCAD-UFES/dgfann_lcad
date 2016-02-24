@@ -290,7 +290,7 @@ The results of the new experiments can be accessed in the following links:
 
 ## New experiment for Velocity
 
-We made an additional experiment to attenuate the difference between the neural net predictions and the values measured by the car's velocity sensors. In this experiment, we added the 2510 first samples from 2014/08/02 to training dataset used in [1] (new training dataset showed in Fig. 17) and run the dgfann again to find the neural network configuration.
+We made an additional experiment to attenuate the difference between the neural net predictions and the values measured by the car's velocity sensors. In this experiment, we added the 2510 first samples from 2014/08/02 to training dataset (showed in Fig. 17) used in [1] and run the dgfann again to find the neural network configuration.
 
 |[![alt text](datasets/new_datasets/plots/new_exp/Velocity_train_paper_dataset-800x600.png)](datasets/new_datasets/plots/new_exp/Velocity_train_paper_dataset.png)|
 :-------------:
