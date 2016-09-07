@@ -24,7 +24,7 @@ To install our genetic algorithm framework (dgfann) in Ubuntu:
 * Install fann (http://leenissen.dk  We are using our own fann version due to pull request #64 - https://github.com/libfann/fann/pull/64)
   * git clone https://github.com/LCAD-UFES/fann.git
   * cd fann
-  * make .
+  * cmake .
   * sudo make install
   * sudo apt-get install swig
   * sudo apt-get install python-dev
