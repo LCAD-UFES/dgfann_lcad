@@ -32,5 +32,5 @@ cleanPatterns:
 	cd entradas && make clean
 
 distclean: clean cleanPatterns clean_teste_RNA
-	rm -rf Execucao_Alg_Gen.log Resultado_Alg-Genetico.txt Redes_Geradas results_plots results_tests
+	rm -rf Execucao_Alg_Gen.log Resultado_Alg-Genetico.txt Redes_Geradas results_plots results_tests results_Teste-ann results_Teste-plots
 	cd utils && make clean
