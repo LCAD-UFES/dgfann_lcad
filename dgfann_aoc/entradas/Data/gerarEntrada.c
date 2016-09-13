@@ -12,7 +12,7 @@ main(int argc, char **argv)
 	char line[1024];
 	double cc, dc, e, integral, derivada, s;
 #ifdef __VELOCITY
-    double v;
+    double v, t;
 #endif
 	int num_time_lags;
 	int num_lines;
@@ -55,11 +55,10 @@ main(int argc, char **argv)
 		// STEERING (cc, dc, e, i, d, s): -0.000338, -0.000000, 0.000338, 0.000043, 0.000000, 1.878823
 		//sscanf(line, "STEERING (cc, dc, e, i, d, s): %lf, %lf, %lf, %lf, %lf, %lf", &cc, &dc, &e, &integral, &derivada, &s);
 #ifdef __VELOCITY
-        sscanf(line, "STEERING (cc, dc, e, i, d, s, v, t): %lf, %lf, %lf, %lf, %lf, %lf, %lf", &cc, &dc, &e, &integral, &derivada, &v, &s);
+        sscanf(line, "STEERING (cc, dc, e, i, d, s, v, t): %lf, %lf, %lf, %lf, %lf, %lf, %lf, %lf", &cc, &dc, &e, &integral, &derivada, &s, &v, &t);
 #else
         sscanf(line, "STEERING (cc, dc, e, i, d, s): %lf, %lf, %lf, %lf, %lf, %lf", &cc, &dc, &e, &integral, &derivada, &s);
 #endif
-
 		if (i >= num_inputs)
 		{
 			for (j = 0; j < num_inputs; j++)
