@@ -5,7 +5,7 @@ qntNeuroniosEntrada  = 80
 qntNeuroniosSaida    = 1
 
 # nome dos arquivos de treino e de testes
-nomeArqTeste     = 'entradas/testes-ordenado.fann'
+nomeArqTeste     = 'entradas/testes.fann'
 nomeArqTreino    = 'entradas/treino.fann'
 nomeArqValidacao = 'entradas/validacao.fann'
 
